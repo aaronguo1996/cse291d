@@ -1,0 +1,7 @@
+filters p (Stream next0 s0) = Stream next s0
+    where
+        next s = case next0 s of
+                    Done -> ?
+                    Skip s' -> ?
+                    Yield x s' | p x -> ?
+                               | otherwise -> ?
