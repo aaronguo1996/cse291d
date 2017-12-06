@@ -37,4 +37,3 @@ expand idx state = case idx of
                      1 -> ESkip state
                      2 -> EYield (Var "x") state
                      3 -> EYield (App (Var "f") (Var "x")) state
-                            
