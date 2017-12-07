@@ -10,19 +10,19 @@ data Expr = EDone
 
 -- |The 'listToStr' converts a state list into a string 
 -- in the form of tuple in the program
-listToStr :: [String] -> String
-listToStr l = case l of
+listToTuple :: [String] -> String
+listToTuple l = case l of
                 []        -> ""
                 [x]       -> x
-                x:xs      -> x ++ "," ++ (listToStr xs)
+                x:xs      -> x ++ "," ++ (listToTuple xs)
 
 -- |The 'exprToStr' converts an expression into a string 
 -- to be replaced in program
 exprToStr :: Expr -> String
 exprToStr e = case e of
                 EDone       -> "Done"
-                ESkip t     -> "Skip (" ++ (listToStr t) ++ ")"
-                EYield e0 t -> "Yield " ++ (exprToStr e0) ++ " (" ++ (listToStr t) ++ ")"
+                ESkip t     -> "Skip (" ++ (listToTuple t) ++ ")"
+                EYield e0 t -> "Yield " ++ (exprToStr e0) ++ " (" ++ (listToTuple t) ++ ")"
                 Var v       -> v
                 App e1 e2   -> "(" ++ (exprToStr e1) ++ " " ++ (exprToStr e2) ++ ")"
                 Tuple e1 e2 -> "(" ++ (exprToStr e1) ++ "," ++ (exprToStr e2) ++ ")"

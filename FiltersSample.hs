@@ -1,4 +1,4 @@
-import StreamFusion;
+import StreamFusion
 
 filters :: (a->Bool)->Stream a->Stream a
 filters p (Stream next0 s0) = Stream next s0

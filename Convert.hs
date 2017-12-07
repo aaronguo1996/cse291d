@@ -1,12 +1,16 @@
 import Control.Monad
 import Data.List
+import Data.Strings
 import Language.Haskell.Interpreter
 import Language.Haskell.Interpreter.Extension
 import System.Environment
 import System.IO
 import System.Random
+import System.Process
+import System.Exit
 import Enumeration
 import StreamFusion
+import Helper
 
 -- | a helper function to split the read file into separate lines
 -- The only argument for this function is of type 'String' which denotes 
@@ -91,21 +95,30 @@ errorString (WontCompile es) = intercalate "\n" (header : map unbox es)
 errorString e = show e
 
 -- | 
-testFilter :: [String] -> IO Bool
-testFilter code = do
+testFilter :: String -> IO Bool
+testFilter codeFile = do
+    let p = ((\x -> x > 10) :: Int -> Bool)
     testCase <- (randomList 10 (1,100)) -- Some magic numbers here
-    r <- runInterpreter $ do
+    (exitCode,testRes,errMsg) <- readProcessWithExitCode "runhaskell" ["-XExistentialQuantification",codeFile,(listToStr testCase)] ""
+    case exitCode of
+        ExitSuccess -> do
+                        let expcRes = show (filter p testCase)
+                        let cleanRes = deleteAt ((Data.List.length testRes) - 1) testRes
+                        return (cleanRes == expcRes)
+        ExitFailure i -> do 
+                        putStrLn $ show errMsg
+                        return False
+    {-r <- runInterpreter $ do
             set [languageExtensions := [asExtension "ExistentialQuantification"]]
             setImports ["Prelude"]
-            loadModules ["StreamFusion"]
-            interpret (unlines code) (as :: (Int -> Bool) -> [Int] -> [Int])
-    let p = ((\x -> x > 2) :: Int -> Bool)
+            loadModules [codeFile,"StreamFusion.hs"]
+            interpret ("\\p l-> filters p l") (as :: (Int -> Bool) -> Stream Int -> Stream Int)
     case r of
-        Left err -> do 
+        Left err -> do
                     putStrLn (errorString err)
                     return False
-        Right f  -> return ((f p testCase) == (filter p testCase))
-
+        Right f  -> return True--((unstream (f p (stream testCase))) == (filter p testCase))
+-}
 -- TODO: update the convertQM function call and add getHoleIdx to the method
 iteration :: [[Int]] -> Int -> [String] -> IO [String]
 iteration fraglist idx filelines = do
@@ -113,17 +126,21 @@ iteration fraglist idx filelines = do
         then return ["Failed"]
         else do
             let code = convertQM (nth idx fraglist) 0 filelines
-            putStrLn $ unlines code
-            success <- testFilter code
+            let codeFile = "Filters" ++ show idx ++ ".hs"
+            let decCode = ["module Filters" ++ show idx ++"(filters) where",""] ++ code
+            writeFile codeFile $ unlines decCode
+            success <- testFilter codeFile
             if success
-                then return code
-                else (iteration fraglist (idx+1) filelines)
+                then do 
+                    putStrLn $ unlines decCode
+                    return decCode
+                else do
+                    putStrLn "Wrong program, new iteration"
+                    (iteration fraglist (idx+1) filelines)
 
 main = do
     [f] <- getArgs
     file <- readFile f
     let filelines = getLines file
-    putStrLn $ unlines filelines
-    --putStrLn $ show (getHoleIdx (getHoles filelines) 3)
     reslines <- iteration (getHoleIdx (getHoles filelines) 3) 0 filelines
     putStrLn $ unlines reslines
