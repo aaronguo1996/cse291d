@@ -5,46 +5,34 @@ import Language.Haskell.Interpreter
 import Language.Haskell.Interpreter.Extension
 import System.Environment
 import System.IO
-import System.Random
 import System.Process
 import System.Exit
 import Enumeration
 import StreamFusion
 import Helper
 
--- | a helper function to split the read file into separate lines
+-- | A helper function to split the read file into separate lines
 -- The only argument for this function is of type 'String' which denotes 
 -- the input fileline
 getLines :: String -> [String]
 getLines file = lines file
 
--- | hi
+-- | A helper function to count the number of holes in a given line
+-- The only argument for this function is of type 'String' which is the 
+-- line with holes in it
 getHoleByLine :: String -> Int
 getHoleByLine []     = 0
 getHoleByLine (x:xs)
     | x == '?'  = 1 + getHoleByLine xs 
     | otherwise = getHoleByLine xs
 
--- | function
+-- | A helper function to count all the number of holes in a code segment
+-- The first argument is of type '[String]'
+-- which should be the code segment we need to process 
 getHoles :: [String] -> Int
 getHoles fileline = Prelude.foldl (\a l -> a + (getHoleByLine l)) 0 fileline
 
--- | a helper function for getHoleIdx to generate a sequence of integers
--- The first argument is an integer which is the sequence top
-sequenceTo :: Int -> [[Int]]
-sequenceTo top
-    | top > 0   = (sequenceTo (top-1)) ++ [[top]]
-    | otherwise = [[0]]
-
--- | a helper function to add a sequence of up to element to each of the given 
--- lists and get a new list of lists with their multiplication
--- The first argument is the added element
--- The second argument is the given lists
-appendTo :: Int -> [[Int]] -> [[Int]]
-appendTo (-1) tails = []
-appendTo elmt tails = (appendTo (elmt - 1) tails) ++ (Prelude.map ((:) elmt) tails)
-
--- | the function 'getHoleIdx' assign holes by the number of holes and 
+-- | The function 'getHoleIdx' assign holes by the number of holes and 
 -- number of the candidates
 -- The first argument is an Int denotes the number of holes
 -- The second argument is an Int denotes the number of candidates
@@ -53,12 +41,7 @@ getHoleIdx holes cands
     | holes == 1 = sequenceTo cands
     | otherwise  = appendTo cands (getHoleIdx (holes - 1) cands)
 
--- Helper function which returns the nth element in a list
-nth :: Int -> [a] -> a
-nth 0 (x : _ ) = x
-nth n (_ : xs) = nth (n - 1) xs
-
--- | the function 'fillHoles' replace the holes in the program by specific code
+-- | The function 'fillHoles' replace the holes in the program by specific code
 -- fragments according to their assigned indices
 fillHoles :: [Int] -> Int -> String -> String
 fillHoles frags idx []     = []
@@ -68,7 +51,13 @@ fillHoles frags idx (x:xs)
   where
     thisHole       = exprToStr (expand (nth idx frags) ["s1"])
     remainingHoles = fillHoles frags (idx+1) xs
--- |
+
+-- | The function 'convertQM' replace the question marks in code segment by
+-- calling the function 'fillHoles' and concatenate the results
+-- The first argument is of type '[Int]' which means the code segment assigned 
+-- to each hole in the given code consequently
+-- The second argument is of type 'Int' which means the index of current hole
+-- The third argument is of type '[String]' which is the code to be processed 
 convertQM :: [Int] -> Int -> [String] -> [String]
 convertQM frags idx []     = []
 convertQM frags idx (x:xs) = 
@@ -77,49 +66,36 @@ convertQM frags idx (x:xs) =
     hline  = fillHoles frags idx x
     tlines = convertQM frags (idx + (getHoleByLine x)) xs
 
--- |
-randomList :: Int -> (Int,Int) -> IO([Int])
-randomList 0 _    = return []
-randomList n bnds = do
-    r  <- randomRIO bnds
-    rs <- randomList (n-1) bnds
-    return (r:rs) 
---randomList :: (Random a) => (a,a) -> Int -> StdGen -> [a]
---randomList bnds n = take n . randomRs bnds
-
-errorString :: InterpreterError -> String
-errorString (WontCompile es) = intercalate "\n" (header : map unbox es)
-  where
-    header = "ERROR: Won't compile:"
-    unbox (GhcError e) = e
-errorString e = show e
-
--- | 
+-- | The function 'testFilter' is for filters testing
+-- The first argument is of type 'String' which is the code to be executed
+-- In this function, we call the 'runhaskell' in the shell command and get the
+-- output to compare whether they have the same behavior as the built-in filter
 testFilter :: String -> IO Bool
 testFilter codeFile = do
-    let p = ((\x -> x > 10) :: Int -> Bool)
+    let p = ((\x -> x > 75) :: Int -> Bool)
     testCase <- (randomList 10 (1,100)) -- Some magic numbers here
     (exitCode,testRes,errMsg) <- readProcessWithExitCode "runhaskell" ["-XExistentialQuantification",codeFile,(listToStr testCase)] ""
     case exitCode of
         ExitSuccess -> do
-                        let expcRes = show (filter p testCase)
+                        putStrLn $ show (map (\x->if x<50 then x+50 else x) testCase)
+                        let expcRes = show (filter p (map (\x->if x<50 then x+50 else x) testCase))
                         let cleanRes = deleteAt ((Data.List.length testRes) - 1) testRes
+                        putStrLn $ expcRes
+                        putStrLn $ cleanRes
                         return (cleanRes == expcRes)
         ExitFailure i -> do 
-                        putStrLn $ show errMsg
+                        putStrLn $ errMsg
+                        readProcessWithExitCode "rm" [codeFile] ""
                         return False
-    {-r <- runInterpreter $ do
-            set [languageExtensions := [asExtension "ExistentialQuantification"]]
-            setImports ["Prelude"]
-            loadModules [codeFile,"StreamFusion.hs"]
-            interpret ("\\p l-> filters p l") (as :: (Int -> Bool) -> Stream Int -> Stream Int)
-    case r of
-        Left err -> do
-                    putStrLn (errorString err)
-                    return False
-        Right f  -> return True--((unstream (f p (stream testCase))) == (filter p testCase))
--}
--- TODO: update the convertQM function call and add getHoleIdx to the method
+
+-- | The function 'iteration' iteratively search in the components to find a
+-- program with proper behavior we expected
+-- The first argument is of type '[[Int]]' which is all the possible assignment
+-- of indices for the holes in the code segment
+-- The second argument is of type 'Int' which is index of current assignment
+-- The third argument is of type '[String]' which is the code to be processed
+-- In this function we add some decorated code to the original code sketch so 
+-- that the following steps have certain properties we want.
 iteration :: [[Int]] -> Int -> [String] -> IO [String]
 iteration fraglist idx filelines = do
     if (idx > Data.List.length fraglist)
@@ -135,9 +111,11 @@ iteration fraglist idx filelines = do
                     putStrLn $ unlines decCode
                     return decCode
                 else do
-                    putStrLn "Wrong program, new iteration"
+                    putStrLn "Wrong program, new iteration..."
+                    --readProcessWithExitCode "rm" [codeFile] ""
                     (iteration fraglist (idx+1) filelines)
 
+-- | This is the main function to be executed
 main = do
     [f] <- getArgs
     file <- readFile f

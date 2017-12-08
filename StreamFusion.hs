@@ -19,3 +19,10 @@ unstream (Stream next0 s0) = unfold s0
             Done -> []
             Skip s' -> unfold s'
             Yield x s' -> x:unfold s' 
+
+instance (Show a) => Show (Stream a) where
+    show (Stream next xs) = 
+        case next xs of
+            Done -> " D"
+            Skip s' -> " S" ++ show (Stream next s')
+            Yield x s' -> " Y" ++ (show x) ++ show (Stream next s')
