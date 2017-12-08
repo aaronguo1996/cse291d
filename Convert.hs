@@ -112,7 +112,7 @@ iteration fraglist idx filelines = do
                     return decCode
                 else do
                     putStrLn "Wrong program, new iteration..."
-                    --readProcessWithExitCode "rm" [codeFile] ""
+                    readProcessWithExitCode "rm" [codeFile] ""
                     (iteration fraglist (idx+1) filelines)
 
 -- | This is the main function to be executed
