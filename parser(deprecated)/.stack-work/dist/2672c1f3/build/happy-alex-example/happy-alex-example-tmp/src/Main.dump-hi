@@ -1,0 +1,66 @@
+
+==================== FINAL INTERFACE ====================
+2017-11-27 19:26:31.9171072 UTC
+
+interface main@main:Main 7103
+  interface hash: 81ed4dca2bb98254a3f66f5c6cb916dd
+  ABI hash: dd2c9364bdc9f4110a1666c17c587b13
+  export-list hash: 43c7cf3ad1cbbbbb64e74590184e836c
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 8030a15bed02e3536c251f1358c93283
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+module dependencies: Calc Calc.Base Calc.Data Calc.Lexer
+                     Calc.Parser Calc.Wrapper
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0 bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:GHC.IO.Exception e38c1261b70caecb7af416b94c82c925
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  base-4.8.2.0:System.Exit f5581af4ad998e898da01fdc74c2769b
+import  -/  base-4.8.2.0:System.IO 638c10c4fd4901a0aca5b77c9f14123d
+import  -/  bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Lazy 381d43ef4fab40c90f7ad267b585f3f2
+import  -/  bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Lazy.Char8 caf675882d13961c08b8e4ef396bdc72
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+import  -/  Calc 7e1a3fb89394a45d672b18c955d940eb
+  exports: 08930b73071b709c5f12b2e98f56f998
+import  -/  Calc.Wrapper c090e34326180b8c4e94081687b586ee
+  parse 97b036f345ed6cdc8a41d7ddb0ab8068
+ee6590a2ab0ffaa5074d93f2d3fc4c03
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+e3bd864fe81295cabb6b36ca45539f6f
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U> -}
+e0cb4c8d876273838c3b9b94e525a859
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

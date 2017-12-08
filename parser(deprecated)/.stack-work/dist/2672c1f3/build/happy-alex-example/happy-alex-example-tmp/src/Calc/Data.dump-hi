@@ -1,0 +1,634 @@
+
+==================== FINAL INTERFACE ====================
+2017-11-27 19:26:31.0818386 UTC
+
+interface main@main:Calc.Data 7103
+  interface hash: f9a97b52e7483cd94f71a1f72c932556
+  ABI hash: 458e01b909d0a414ea04764919946bdb
+  export-list hash: ddca78a100a14ff199d3e263e042f6e3
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: e3d189ab216185ca46e8ec3971f0c29f
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Calc.Data.CaseCons{Calc.Data.CaseCons}
+  Calc.Data.CaseNil{Calc.Data.CaseNil}
+  Calc.Data.Exp{Calc.Data.Add Calc.Data.And Calc.Data.App Calc.Data.Brack Calc.Data.Case Calc.Data.Cons Calc.Data.Div Calc.Data.ExpFalse Calc.Data.ExpTrue Calc.Data.ExpVar Calc.Data.ITE Calc.Data.Int Calc.Data.Lambda Calc.Data.Let Calc.Data.Mul Calc.Data.Nil Calc.Data.Not Calc.Data.OpEq Calc.Data.OpGT Calc.Data.OpLT Calc.Data.Or Calc.Data.Sub}
+  Calc.Data.Program{Calc.Data.DefEq}
+  Calc.Data.Var{Calc.Data.Var}
+module dependencies: Calc.Lexer
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0 bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:GHC.Base a4939789b2cfd60b36ed163e56a623cd
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  Calc.Lexer 7dbed6056303e487ca72fa46faeae277
+  exports: b35ab5ebb4f27b39723a377a17a32d01
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fEqCaseCons :: GHC.Classes.Eq Calc.Data.CaseCons
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Data.CaseCons
+                  Calc.Data.$fEqCaseCons_$c==
+                  Calc.Data.$fEqCaseCons_$c/= -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fEqCaseCons_$c/= ::
+    Calc.Data.CaseCons -> Calc.Data.CaseCons -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)LL),1*U(1*U(1*U),1*U(1*U),1*U)><S(S(S)LL),1*U(1*U(1*U),1*U(1*U),1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: Calc.Data.CaseCons b :: Calc.Data.CaseCons ->
+                 case Calc.Data.$fEqCaseCons_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fEqCaseCons_$c== ::
+    Calc.Data.CaseCons -> Calc.Data.CaseCons -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)LL),1*U(1*U(1*U),1*U(1*U),1*U)><S(S(S)LL),1*U(1*U(1*U),1*U(1*U),1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: Calc.Data.CaseCons w1 :: Calc.Data.CaseCons ->
+                 case w of ww { Calc.Data.CaseCons ww1 ww2 ww3 ->
+                 case ww1 of ww4 { Calc.Data.Var ww5 ->
+                 case w1 of ww6 { Calc.Data.CaseCons ww7 ww8 ww9 ->
+                 case ww7 of ww10 { Calc.Data.Var ww11 ->
+                 Calc.Data.$w$c== ww5 ww2 ww3 ww11 ww8 ww9 } } } }) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fEqCaseNil :: GHC.Classes.Eq Calc.Data.CaseNil
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Data.CaseNil
+                  Calc.Data.$fEqCaseNil_$c==1
+                  Calc.Data.$fEqCaseNil_$c/= -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fEqCaseNil_$c/= ::
+    Calc.Data.CaseNil -> Calc.Data.CaseNil -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S),1*U(1*U)><S(S),1*U(1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: Calc.Data.CaseNil b :: Calc.Data.CaseNil ->
+                 case a of wild { Calc.Data.CaseNil a1 ->
+                 case b of wild1 { Calc.Data.CaseNil b1 ->
+                 case Calc.Data.$fEqCaseNil_$c== a1 b1 of wild2 {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False } } }) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fEqCaseNil_$c== ::
+    Calc.Data.Exp -> Calc.Data.Exp -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fEqCaseNil_$c==1 ::
+    Calc.Data.CaseNil -> Calc.Data.CaseNil -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S),1*U(1*U)><S(S),1*U(1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Calc.Data.CaseNil ds1 :: Calc.Data.CaseNil ->
+                 case ds of wild { Calc.Data.CaseNil a1 ->
+                 case ds1 of wild1 { Calc.Data.CaseNil b1 ->
+                 Calc.Data.$fEqCaseNil_$c== a1 b1 } }) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fEqExp :: GHC.Classes.Eq Calc.Data.Exp
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Data.Exp
+                  Calc.Data.$fEqCaseNil_$c==
+                  Calc.Data.$fEqExp_$c/= -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fEqExp_$c/= :: Calc.Data.Exp -> Calc.Data.Exp -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: Calc.Data.Exp b :: Calc.Data.Exp ->
+                 case Calc.Data.$fEqCaseNil_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+d2e6774a8ef84482f52352224efc1af2
+  $fEqProgram :: GHC.Classes.Eq Calc.Data.Program
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Data.Program
+                  Calc.Data.$fEqProgram_$c==
+                  Calc.Data.$fEqProgram_$c/= -}
+d2e6774a8ef84482f52352224efc1af2
+  $fEqProgram_$c/= ::
+    Calc.Data.Program -> Calc.Data.Program -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(1*U),1*U)><S(S(S)L),1*U(1*U(1*U),1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: Calc.Data.Program b :: Calc.Data.Program ->
+                 case Calc.Data.$fEqProgram_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+d2e6774a8ef84482f52352224efc1af2
+  $fEqProgram_$c== ::
+    Calc.Data.Program -> Calc.Data.Program -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(1*U),1*U)><S(S(S)L),1*U(1*U(1*U),1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: Calc.Data.Program w1 :: Calc.Data.Program ->
+                 case w of ww { Calc.Data.DefEq ww1 ww2 ->
+                 case ww1 of ww3 { Calc.Data.Var ww4 ->
+                 case w1 of ww5 { Calc.Data.DefEq ww6 ww7 ->
+                 case ww6 of ww8 { Calc.Data.Var ww9 ->
+                 Calc.Data.$w$c==1 ww4 ww2 ww9 ww7 } } } }) -}
+811863b2c7d034975bef0df517b79898
+  $fEqVar :: GHC.Classes.Eq Calc.Data.Var
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Data.Var Calc.Data.$fEqVar_$c== Calc.Data.$fEqVar_$c/= -}
+811863b2c7d034975bef0df517b79898
+  $fEqVar_$c/= :: Calc.Data.Var -> Calc.Data.Var -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S),1*U(1*U)><S(S),1*U(1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a :: Calc.Data.Var b :: Calc.Data.Var ->
+                 case a of wild { Calc.Data.Var a1 ->
+                 case b of wild1 { Calc.Data.Var b1 ->
+                 case GHC.Base.eqString a1 b1 of wild2 {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False } } }) -}
+811863b2c7d034975bef0df517b79898
+  $fEqVar_$c== :: Calc.Data.Var -> Calc.Data.Var -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S),1*U(1*U)><S(S),1*U(1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Calc.Data.Var ds1 :: Calc.Data.Var ->
+                 case ds of wild { Calc.Data.Var a1 ->
+                 case ds1 of wild1 { Calc.Data.Var b1 ->
+                 GHC.Base.eqString a1 b1 } }) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fShowCaseCons :: GHC.Show.Show Calc.Data.CaseCons
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Data.CaseCons
+                  Calc.Data.$fShowCaseCons_$cshowsPrec1
+                  Calc.Data.$fShowCaseCons_$cshow
+                  Calc.Data.$fShowCaseCons_$cshowList -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fShowCaseCons1 :: Calc.Data.CaseCons -> GHC.Show.ShowS
+  {- Arity: 1,
+     Unfolding: (\ w :: Calc.Data.CaseCons ->
+                 case w of ww { Calc.Data.CaseCons ww1 ww2 ww3 ->
+                 Calc.Data.$w$cshowsPrec 0 ww1 ww2 ww3 }) -}
+8f0645820749d53dab0356302ce27d9d
+  $fShowCaseCons2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "CaseCons "#) -}
+f2f966dfde4d9a3a947848f841533162
+  $fShowCaseCons3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Var "#) -}
+f328c0451f8a47d36c5ce5c0f8190e6f
+  $fShowCaseCons4 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fShowCaseCons_$cshow :: Calc.Data.CaseCons -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(U(U),U(U),1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Calc.Data.CaseCons ->
+                 Calc.Data.$fShowCaseCons_$cshowsPrec1
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fShowCaseCons_$cshowList :: [Calc.Data.CaseCons] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Calc.Data.CaseCons
+                   Calc.Data.$fShowCaseCons1) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fShowCaseCons_$cshowsPrec ::
+    GHC.Types.Int -> Calc.Data.Exp -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <L,1*U(U)><S,1*U> -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fShowCaseCons_$cshowsPrec1 ::
+    GHC.Types.Int -> Calc.Data.CaseCons -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U(U)><S,1*U(U(U),U(U),1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: GHC.Types.Int w1 :: Calc.Data.CaseCons ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Calc.Data.CaseCons ww3 ww4 ww5 ->
+                 Calc.Data.$w$cshowsPrec ww1 ww3 ww4 ww5 } }) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fShowCaseNil :: GHC.Show.Show Calc.Data.CaseNil
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Data.CaseNil
+                  Calc.Data.$fShowCaseNil_$cshowsPrec
+                  Calc.Data.$fShowCaseNil_$cshow
+                  Calc.Data.$fShowCaseNil_$cshowList -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fShowCaseNil1 :: Calc.Data.CaseNil -> GHC.Show.ShowS
+  {- Arity: 1,
+     Unfolding: (\ w :: Calc.Data.CaseNil ->
+                 case w of ww { Calc.Data.CaseNil ww1 ->
+                 Calc.Data.$w$cshowsPrec2 0 ww1 }) -}
+8cfae6a1cb0e5f2c851112b73556564a
+  $fShowCaseNil2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "CaseNil "#) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fShowCaseNil_$cshow :: Calc.Data.CaseNil -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Calc.Data.CaseNil ->
+                 case x of wild { Calc.Data.CaseNil b1 ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b c :: GHC.Types.Char -> b -> b[OneShot] n :: b[OneShot] ->
+                    GHC.Base.foldr @ GHC.Types.Char @ b c n Calc.Data.$fShowCaseNil2)
+                   (Calc.Data.$fShowCaseCons_$cshowsPrec
+                      Calc.Data.$fShowCaseCons4
+                      b1
+                      (GHC.Types.[] @ GHC.Types.Char)) }) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fShowCaseNil_$cshowList :: [Calc.Data.CaseNil] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Calc.Data.CaseNil
+                   Calc.Data.$fShowCaseNil1) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fShowCaseNil_$cshowsPrec ::
+    GHC.Types.Int -> Calc.Data.CaseNil -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U(U)><S,1*U(1*U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: GHC.Types.Int w1 :: Calc.Data.CaseNil ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Calc.Data.CaseNil ww3 ->
+                 Calc.Data.$w$cshowsPrec2 ww1 ww3 } }) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fShowExp :: GHC.Show.Show Calc.Data.Exp
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Data.Exp
+                  Calc.Data.$fShowCaseCons_$cshowsPrec
+                  Calc.Data.$fShowExp_$cshow
+                  Calc.Data.$fShowExp_$cshowList -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fShowExp1 :: Calc.Data.Exp -> GHC.Show.ShowS
+  {- Arity: 1,
+     Unfolding: (Calc.Data.$fShowCaseCons_$cshowsPrec
+                   Calc.Data.$fShowExp2) -}
+d95c549692f1f67405da7d51d2f68a8c
+  $fShowExp2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fShowExp_$cshow :: Calc.Data.Exp -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Calc.Data.Exp ->
+                 Calc.Data.$fShowCaseCons_$cshowsPrec
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $fShowExp_$cshowList :: [Calc.Data.Exp] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Calc.Data.Exp
+                   Calc.Data.$fShowExp1) -}
+d2e6774a8ef84482f52352224efc1af2
+  $fShowProgram :: GHC.Show.Show Calc.Data.Program
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Data.Program
+                  Calc.Data.$fShowProgram_$cshowsPrec
+                  Calc.Data.$fShowProgram_$cshow
+                  Calc.Data.$fShowProgram_$cshowList -}
+d2e6774a8ef84482f52352224efc1af2
+  $fShowProgram1 :: Calc.Data.Program -> GHC.Show.ShowS
+  {- Arity: 1,
+     Unfolding: (\ w :: Calc.Data.Program ->
+                 case w of ww { Calc.Data.DefEq ww1 ww2 ->
+                 Calc.Data.$w$cshowsPrec3 0 ww1 ww2 }) -}
+b266b4257da49307808dcd85e17f0a1b
+  $fShowProgram2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "DefEq "#) -}
+d2e6774a8ef84482f52352224efc1af2
+  $fShowProgram_$cshow :: Calc.Data.Program -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U(1*U),1*U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Calc.Data.Program ->
+                 case w of ww { Calc.Data.DefEq ww1 ww2 ->
+                 Calc.Data.$w$cshow ww1 ww2 }) -}
+d2e6774a8ef84482f52352224efc1af2
+  $fShowProgram_$cshowList :: [Calc.Data.Program] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Calc.Data.Program
+                   Calc.Data.$fShowProgram1) -}
+d2e6774a8ef84482f52352224efc1af2
+  $fShowProgram_$cshowsPrec ::
+    GHC.Types.Int -> Calc.Data.Program -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U(U)><S,1*U(U(U),1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: GHC.Types.Int w1 :: Calc.Data.Program ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Calc.Data.DefEq ww3 ww4 ->
+                 Calc.Data.$w$cshowsPrec3 ww1 ww3 ww4 } }) -}
+811863b2c7d034975bef0df517b79898
+  $fShowVar :: GHC.Show.Show Calc.Data.Var
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Data.Var
+                  Calc.Data.$fShowVar_$cshowsPrec
+                  Calc.Data.$fShowVar_$cshow
+                  Calc.Data.$fShowVar_$cshowList -}
+811863b2c7d034975bef0df517b79898
+  $fShowVar1 :: Calc.Data.Var -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ w :: Calc.Data.Var w1 :: GHC.Base.String ->
+                 case w of ww { Calc.Data.Var ww1 ->
+                 Calc.Data.$w$cshowsPrec1 0 ww1 w1 }) -}
+811863b2c7d034975bef0df517b79898
+  $fShowVar_$cshow :: Calc.Data.Var -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Calc.Data.Var ->
+                 Calc.Data.$fShowVar_$cshowsPrec
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+811863b2c7d034975bef0df517b79898
+  $fShowVar_$cshowList :: [Calc.Data.Var] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Calc.Data.Var
+                   Calc.Data.$fShowVar1) -}
+811863b2c7d034975bef0df517b79898
+  $fShowVar_$cshowsPrec ::
+    GHC.Types.Int -> Calc.Data.Var -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S,1*U(U)><S,1*U(1*U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ w :: GHC.Types.Int w1 :: Calc.Data.Var w2 :: GHC.Base.String ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Calc.Data.Var ww3 ->
+                 Calc.Data.$w$cshowsPrec1 ww1 ww3 w2 } }) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $w$c== ::
+    GHC.Base.String
+    -> Calc.Data.Var
+    -> Calc.Data.Exp
+    -> GHC.Base.String
+    -> Calc.Data.Var
+    -> Calc.Data.Exp
+    -> GHC.Types.Bool
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U(1*U)><L,1*U><S,1*U><L,1*U(1*U)><L,1*U>,
+     Inline: [0] -}
+2bed6ca039ec795e746127fcf8e82f78
+  $w$c==1 ::
+    GHC.Base.String
+    -> Calc.Data.Exp
+    -> GHC.Base.String
+    -> Calc.Data.Exp
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Base.String
+                   ww1 :: Calc.Data.Exp
+                   ww2 :: GHC.Base.String
+                   ww3 :: Calc.Data.Exp ->
+                 case GHC.Base.eqString ww ww2 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True -> Calc.Data.$fEqCaseNil_$c== ww1 ww3 }) -}
+35a694410171c73243553fa431127d2b
+  $w$cshow :: Calc.Data.Var -> Calc.Data.Exp -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U(1*U)><L,1*U>, Inline: [0],
+     Unfolding: (\ ww :: Calc.Data.Var ww1 :: Calc.Data.Exp ->
+                 GHC.Base.++
+                   @ GHC.Types.Char
+                   Calc.Data.$fShowProgram2
+                   (case ww of ww2 { Calc.Data.Var ww3 ->
+                    Calc.Data.$w$cshowsPrec1
+                      11
+                      ww3
+                      (GHC.Types.:
+                         @ GHC.Types.Char
+                         GHC.Show.showSpace1
+                         (Calc.Data.$fShowCaseCons_$cshowsPrec
+                            Calc.Data.$fShowCaseCons4
+                            ww1
+                            (GHC.Types.[] @ GHC.Types.Char))) })) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> Calc.Data.Var
+    -> Calc.Data.Var
+    -> Calc.Data.Exp
+    -> GHC.Show.ShowS
+  {- Arity: 4, Strictness: <L,U><L,U(U)><L,U(U)><L,1*U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int#
+                   ww1 :: Calc.Data.Var
+                   ww2 :: Calc.Data.Var
+                   ww3 :: Calc.Data.Exp ->
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                   = Calc.Data.$fShowCaseCons_$cshowsPrec
+                       Calc.Data.$fShowCaseCons4
+                       ww3
+                 } in
+                 let {
+                   g1 :: GHC.Base.String -> GHC.Base.String
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ x :: GHC.Base.String ->
+                     case ww1 of ww4 { Calc.Data.Var ww5 ->
+                     Calc.Data.$w$cshowsPrec1
+                       11
+                       ww5
+                       (GHC.Types.:
+                          @ GHC.Types.Char
+                          GHC.Show.showSpace1
+                          (case ww2 of ww6 { Calc.Data.Var ww7 ->
+                           Calc.Data.$w$cshowsPrec1
+                             11
+                             ww7
+                             (GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 (g x)) })) }
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11) of wild {
+                   GHC.Types.False
+                   -> \ x :: GHC.Base.String ->
+                      GHC.Base.++ @ GHC.Types.Char Calc.Data.$fShowCaseCons2 (g1 x)
+                   GHC.Types.True
+                   -> \ x :: GHC.Base.String ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Calc.Data.$fShowCaseCons2
+                           (g1 (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 x))) }) -}
+05b32a8c2c0f2c795effa3d018530983
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int#
+    -> GHC.Base.String -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <L,U><L,1*U><L,U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int#
+                   ww1 :: GHC.Base.String
+                   w :: GHC.Base.String ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11) of wild {
+                   GHC.Types.False
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Calc.Data.$fShowCaseCons3
+                        (GHC.Types.:
+                           @ GHC.Types.Char
+                           GHC.Show.shows6
+                           (GHC.Show.showLitString
+                              ww1
+                              (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w)))
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Calc.Data.$fShowCaseCons3
+                           (GHC.Types.:
+                              @ GHC.Types.Char
+                              GHC.Show.shows6
+                              (GHC.Show.showLitString
+                                 ww1
+                                 (GHC.Types.:
+                                    @ GHC.Types.Char
+                                    GHC.Show.shows6
+                                    (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 w))))) }) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  $w$cshowsPrec2 :: GHC.Prim.Int# -> Calc.Data.Exp -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <L,U><L,1*U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int# ww1 :: Calc.Data.Exp ->
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                   = Calc.Data.$fShowCaseCons_$cshowsPrec
+                       Calc.Data.$fShowCaseCons4
+                       ww1
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11) of wild {
+                   GHC.Types.False
+                   -> \ x :: GHC.Base.String ->
+                      GHC.Base.++ @ GHC.Types.Char Calc.Data.$fShowCaseNil2 (g x)
+                   GHC.Types.True
+                   -> \ x :: GHC.Base.String ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Calc.Data.$fShowCaseNil2
+                           (g (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 x))) }) -}
+f72c04434c366b21391647c37967c118
+  $w$cshowsPrec3 ::
+    GHC.Prim.Int# -> Calc.Data.Var -> Calc.Data.Exp -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U><L,U(U)><L,1*U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int#
+                   ww1 :: Calc.Data.Var
+                   ww2 :: Calc.Data.Exp ->
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                   = Calc.Data.$fShowCaseCons_$cshowsPrec
+                       Calc.Data.$fShowCaseCons4
+                       ww2
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
+                   = \ x :: GHC.Base.String ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       Calc.Data.$fShowProgram2
+                       (case ww1 of ww3 { Calc.Data.Var ww4 ->
+                        Calc.Data.$w$cshowsPrec1
+                          11
+                          ww4
+                          (GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 (g x)) })
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11) of wild {
+                   GHC.Types.False -> p
+                   GHC.Types.True
+                   -> \ x :: GHC.Base.String ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 x)) }) -}
+1f8ece0c7696867a0e71e3cc6af50afc
+  data CaseCons = CaseCons Calc.Data.Var Calc.Data.Var Calc.Data.Exp
+1f8ece0c7696867a0e71e3cc6af50afc
+  data CaseNil = CaseNil Calc.Data.Exp
+1f8ece0c7696867a0e71e3cc6af50afc
+  data Exp
+    = Let Calc.Data.Var Calc.Data.Exp Calc.Data.Exp
+    | ITE Calc.Data.Exp Calc.Data.Exp Calc.Data.Exp
+    | Case Calc.Data.Var Calc.Data.CaseNil Calc.Data.CaseCons
+    | Lambda Calc.Data.Var Calc.Data.Exp
+    | App Calc.Data.Exp Calc.Data.Exp
+    | Brack Calc.Data.Exp
+    | ExpTrue
+    | ExpFalse
+    | And Calc.Data.Exp Calc.Data.Exp
+    | Or Calc.Data.Exp Calc.Data.Exp
+    | Not Calc.Data.Exp
+    | Nil
+    | Cons Calc.Data.Exp Calc.Data.Exp
+    | Int GHC.Types.Int
+    | Add Calc.Data.Exp Calc.Data.Exp
+    | Sub Calc.Data.Exp Calc.Data.Exp
+    | Mul Calc.Data.Exp Calc.Data.Exp
+    | Div Calc.Data.Exp Calc.Data.Exp
+    | OpGT Calc.Data.Exp Calc.Data.Exp
+    | OpLT Calc.Data.Exp Calc.Data.Exp
+    | OpEq Calc.Data.Exp Calc.Data.Exp
+    | ExpVar Calc.Data.Var
+d2e6774a8ef84482f52352224efc1af2
+  data Program = DefEq Calc.Data.Var Calc.Data.Exp
+811863b2c7d034975bef0df517b79898
+  data Var = Var GHC.Base.String
+instance GHC.Classes.Eq [Calc.Data.CaseCons]
+  = Calc.Data.$fEqCaseCons
+instance GHC.Classes.Eq [Calc.Data.CaseNil] = Calc.Data.$fEqCaseNil
+instance GHC.Classes.Eq [Calc.Data.Exp] = Calc.Data.$fEqExp
+instance GHC.Classes.Eq [Calc.Data.Program] = Calc.Data.$fEqProgram
+instance GHC.Classes.Eq [Calc.Data.Var] = Calc.Data.$fEqVar
+instance GHC.Show.Show [Calc.Data.CaseCons]
+  = Calc.Data.$fShowCaseCons
+instance GHC.Show.Show [Calc.Data.CaseNil]
+  = Calc.Data.$fShowCaseNil
+instance GHC.Show.Show [Calc.Data.Exp] = Calc.Data.$fShowExp
+instance GHC.Show.Show [Calc.Data.Program]
+  = Calc.Data.$fShowProgram
+instance GHC.Show.Show [Calc.Data.Var] = Calc.Data.$fShowVar
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

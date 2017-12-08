@@ -1,0 +1,1960 @@
+
+==================== FINAL INTERFACE ====================
+2017-11-27 19:35:57.7344405 UTC
+
+interface main@main:Calc.Parser 7103
+  interface hash: 48547bb3faf4b4f4dcc3dcad39573d8c
+  ABI hash: 76a4c0101caeb52cd3cb33b7f392239b
+  export-list hash: 90762b2095da70d1d41d8182d0b91ad5
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: bcfcc2a8d9441c4391b1b07aaec50876
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Calc.Parser.happyAccept
+  Calc.Parser.happyActOffsets
+  Calc.Parser.happyCheck
+  Calc.Parser.happyDefActions
+  Calc.Parser.happyDoAction
+  Calc.Parser.happyDoSeq
+  Calc.Parser.happyDontSeq
+  Calc.Parser.happyDrop
+  Calc.Parser.happyDropStk
+  Calc.Parser.happyError'
+  Calc.Parser.happyError_
+  Calc.Parser.happyFail
+  Calc.Parser.happyGoto
+  Calc.Parser.happyGotoOffsets
+  Calc.Parser.happyIn4
+  Calc.Parser.happyIn5
+  Calc.Parser.happyIn6
+  Calc.Parser.happyIn7
+  Calc.Parser.happyIn8
+  Calc.Parser.happyInTok
+  Calc.Parser.happyMonad2Reduce
+  Calc.Parser.happyMonadReduce
+  Calc.Parser.happyNewToken
+  Calc.Parser.happyOut4
+  Calc.Parser.happyOut5
+  Calc.Parser.happyOut6
+  Calc.Parser.happyOut7
+  Calc.Parser.happyOut8
+  Calc.Parser.happyOutTok
+  Calc.Parser.happyParse
+  Calc.Parser.happyParser
+  Calc.Parser.happyReduce
+  Calc.Parser.happyReduceArr
+  Calc.Parser.happyReduce_1
+  Calc.Parser.happyReduce_10
+  Calc.Parser.happyReduce_11
+  Calc.Parser.happyReduce_12
+  Calc.Parser.happyReduce_13
+  Calc.Parser.happyReduce_14
+  Calc.Parser.happyReduce_15
+  Calc.Parser.happyReduce_16
+  Calc.Parser.happyReduce_17
+  Calc.Parser.happyReduce_18
+  Calc.Parser.happyReduce_19
+  Calc.Parser.happyReduce_2
+  Calc.Parser.happyReduce_20
+  Calc.Parser.happyReduce_21
+  Calc.Parser.happyReduce_22
+  Calc.Parser.happyReduce_23
+  Calc.Parser.happyReduce_24
+  Calc.Parser.happyReduce_25
+  Calc.Parser.happyReduce_26
+  Calc.Parser.happyReduce_3
+  Calc.Parser.happyReduce_4
+  Calc.Parser.happyReduce_5
+  Calc.Parser.happyReduce_6
+  Calc.Parser.happyReduce_7
+  Calc.Parser.happyReduce_8
+  Calc.Parser.happyReduce_9
+  Calc.Parser.happyReduction_1
+  Calc.Parser.happyReduction_10
+  Calc.Parser.happyReduction_11
+  Calc.Parser.happyReduction_12
+  Calc.Parser.happyReduction_13
+  Calc.Parser.happyReduction_14
+  Calc.Parser.happyReduction_15
+  Calc.Parser.happyReduction_16
+  Calc.Parser.happyReduction_17
+  Calc.Parser.happyReduction_18
+  Calc.Parser.happyReduction_19
+  Calc.Parser.happyReduction_2
+  Calc.Parser.happyReduction_20
+  Calc.Parser.happyReduction_21
+  Calc.Parser.happyReduction_22
+  Calc.Parser.happyReduction_23
+  Calc.Parser.happyReduction_24
+  Calc.Parser.happyReduction_25
+  Calc.Parser.happyReduction_26
+  Calc.Parser.happyReduction_3
+  Calc.Parser.happyReduction_4
+  Calc.Parser.happyReduction_5
+  Calc.Parser.happyReduction_6
+  Calc.Parser.happyReduction_7
+  Calc.Parser.happyReduction_8
+  Calc.Parser.happyReduction_9
+  Calc.Parser.happyReturn
+  Calc.Parser.happyReturn1
+  Calc.Parser.happySeq
+  Calc.Parser.happyShift
+  Calc.Parser.happySpecReduce_0
+  Calc.Parser.happySpecReduce_1
+  Calc.Parser.happySpecReduce_2
+  Calc.Parser.happySpecReduce_3
+  Calc.Parser.happyTable
+  Calc.Parser.happyTcHack
+  Calc.Parser.happyThen
+  Calc.Parser.happyThen1
+  Calc.Parser.happy_n_nonterms
+  Calc.Parser.happy_n_terms
+  Calc.Parser.indexShortOffAddr
+  Calc.Parser.notHappyAtAll
+  Calc.Parser.HappyAbsSyn{Calc.Parser.HappyAbsSyn}
+  Calc.Parser.HappyAddr{Calc.Parser.HappyA#}
+  Calc.Parser.HappyAny
+  Calc.Parser.HappyStk{Calc.Parser.HappyStk}
+  Calc.Parser.Happy_IntList{Calc.Parser.HappyCons}
+module dependencies: Calc.Base Calc.Data Calc.Lexer
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0 bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+import  -/  array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA:Data.Array 6e22602c1cc5e362609f0924a7c0a209
+import  -/  base-4.8.2.0:Control.Applicative a8ebf5ad4932b411ad7725da68be9801
+import  -/  base-4.8.2.0:Control.Monad 480c5067477275068c9b98be08410df9
+import  -/  base-4.8.2.0:GHC.Arr 70f35e6bfbc61995e045edb612354887
+import  -/  base-4.8.2.0:GHC.Base a4939789b2cfd60b36ed163e56a623cd
+import  -/  base-4.8.2.0:GHC.Exts dba55c2c113578dc7ef7f7530324cbc9
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  Calc.Base ddc776f0b86280963c82d42fe0f25327
+  exports: 150cc122bacd06521551bbbd03cb9ef9
+  Parser 13e7cd43a194e9b6c0b91a4ff7241744
+  happyError bc9035ebdc07b31bcb5df9df989d293b
+  lexer 1fe60b7cdb927e7f8e008b7c093cb26b
+  returnP 032efc49d0149de723965234ea72f39c
+  thenP 086216429d35111a2e37f74449fce681
+import  -/  Calc.Data 458e01b909d0a414ea04764919946bdb
+  exports: ddca78a100a14ff199d3e263e042f6e3
+  Add fe01d18b8f676f65f1695fd1d7cc25c1
+  And 89f3ccb23f8856a7d847ff8f77aab3df
+  App 32bbf9fd8b975d8f0ca85d25a467558f
+  Brack e85c3ae02bd4c5fb017e10a7aabf3de8
+  Case 35ef02df1213ae235aefc26447d89d7e
+  CaseCons 934a6e6b46ef5483ba4d0270799ed230
+  CaseCons 1f8ece0c7696867a0e71e3cc6af50afc
+  CaseNil 2464f87b2dc7562547a877baa5813a0c
+  CaseNil 1f8ece0c7696867a0e71e3cc6af50afc
+  Cons 73e33c4fa65cab53ac4cb5f6d4aee5b3
+  DefEq 3217a5d9a14c1461038377a9caa4b9f8
+  Div f06372d4a151541a841f0022aedba575
+  Exp 1f8ece0c7696867a0e71e3cc6af50afc
+  ExpFalse ad4c920cbde8c5cb3162241a3a028ed3
+  ExpTrue ed447a7150ca2355e3d289b292d707f1
+  ExpVar ef310684a59c36e953c65e4462354f64
+  ITE abeafc6d79dd0282cc064d3df36bdf54
+  Int 0ca37ae540c530f3f6a1e85be4c951af
+  Lambda 3d155a783f3b88b13658dfca3d0f0671
+  Let df4555166eedadd2f75536c8de37721b
+  Mul 58ec3658b00f8c64e484aa3b94e03c71
+  Nil ba8dc4ce5ad80e8eed7d2e3980698832
+  Not eb3e43d2debda7a6e79fa4ab6d23fe81
+  OpEq 1ac3f2dd1385c92b725328b965c5966b
+  OpGT 735b9a0bbce11e9b24ab49164ab273f0
+  OpLT 44d07d1f0179acb6ba123ea7905ce8e2
+  Or ea3e7f275bde8509a5d5f102950a5c73
+  Program d2e6774a8ef84482f52352224efc1af2
+  Sub 6061deb5a6c01ee8e0ebdc2cff07e95b
+  Var 78d22b811b551364c0f86bcdf131d929
+  Var 811863b2c7d034975bef0df517b79898
+import  -/  Calc.Lexer 7dbed6056303e487ca72fa46faeae277
+  Token 9b59ee6b36cb82fccc468a4bfe425d71
+  Token 0f0b166dc6e151fdb621803ea219d929
+  TokenAssign 72ce8c90aa7d5d8bd694404d4743ef5e
+  TokenCB 8d232a66c9e39555c216ad63a361aee7
+  TokenCase a5cf1ccad0e0b98a2494a091409ccf44
+  TokenCons 2373e1d72c836e782f5e6c2ca21bd421
+  TokenDiv 78a7e385096308023887e72572e36464
+  TokenEOF b656a6a682a39c182150ea37cedede16
+  TokenElse e07f19919837a93edee1391d83067075
+  TokenEq 6d2c7bd512525c0aa3e11ab64e73c912
+  TokenFalse 5537533bf67a8714d4d6a1157d5a09c4
+  TokenGT 09f2c0233dfdcf923590b3815224f85f
+  TokenIf ddf51d5522f00732e5d9072b21d9cdac
+  TokenIn f5cb3e93462b04cd6f85b48281ecb07f
+  TokenInt d3dbecd775da304f1d9cded15701bc13
+  TokenLT 9f09363bd2af9c52c9827d27b1d9468d
+  TokenLambda c012ff83806244f9656059965ed3c911
+  TokenLand 24d3ad87049e3abe7e7ee33ad9c69c9c
+  TokenLet 9983a4fb4d85e701c6cff5be205bceba
+  TokenLor 2f8d6b4bb7dcedbbce91c6f41a0903a3
+  TokenMinus 89fb00184ea0ff476ba3675a52d20db1
+  TokenNil 545bdc6525f3934ef573882ec6a5f3ce
+  TokenNot 4c67f63f8e432a0256a29682573d1611
+  TokenOB dddbaaf00ceb66b0cd48c49d17769289
+  TokenOf 25a6a018ad13ccb871d5d825aad4a9da
+  TokenPlus c7639af0ec2def109e405a3270718dc6
+  TokenRarrow 0f6eda26c88f768255e2fb622116ddf6
+  TokenSemi a9185e76b11686fdfdfd62b6f8f1cf9d
+  TokenThen aa1e721c3b604a90f445908ddf383c73
+  TokenTimes 89f86e73b193390c74965b672c668556
+  TokenTrue 381bb963aa07839dbd20acb2094aa483
+  TokenVar 151d65dca0f0e975184324570205d926
+addDependentFile "C:\Users\sherl\AppData\Local\Programs\stack\x86_64-windows\ghc-7.10.3\lib\include\ghcversion.h"
+addDependentFile ".stack-work\dist\2672c1f3\build\autogen\cabal_macros.h"
+fixities infixr 9 HappyStk, infixr 9 HappyStk
+ad9a281e9a16a510de4dbc53a4b73bff
+  $wa ::
+    GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.ByteString.Lazy.Internal.ByteString
+    -> GHC.Prim.Char#
+    -> GHC.Prim.Int#
+    -> Calc.Lexer.AlexUserState
+    -> Data.Either.Either
+         GHC.Base.String (Calc.Lexer.AlexState, Calc.Parser.HappyAbsSyn)
+  {- Arity: 11,
+     Strictness: <L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0] -}
+76f43797bf2712393949bb654fbdad3b
+  $wa1 ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.ByteString.Lazy.Internal.ByteString
+    -> GHC.Prim.Char#
+    -> GHC.Prim.Int#
+    -> Calc.Lexer.AlexUserState
+    -> Data.Either.Either
+         GHC.Base.String (Calc.Lexer.AlexState, Calc.Data.Program)
+  {- Arity: 8, Strictness: <L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int#
+                   ww1 :: GHC.Prim.Int#
+                   ww2 :: GHC.Prim.Int#
+                   ww3 :: GHC.Prim.Int#
+                   ww4 :: Data.ByteString.Lazy.Internal.ByteString
+                   ww5 :: GHC.Prim.Char#
+                   ww6 :: GHC.Prim.Int#
+                   ww7 :: Calc.Lexer.AlexUserState ->
+                 case Calc.Parser.$wa
+                        0
+                        (Calc.Parser.notHappyAtAll @ Calc.Parser.Happy_IntList)
+                        (Calc.Parser.notHappyAtAll
+                           @ (Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn))
+                        ww
+                        ww1
+                        ww2
+                        ww3
+                        ww4
+                        ww5
+                        ww6
+                        ww7 of wild {
+                   Data.Either.Left msg
+                   -> Data.Either.Left
+                        @ GHC.Base.String
+                        @ (Calc.Lexer.AlexState, Calc.Data.Program)
+                        msg
+                   Data.Either.Right ds
+                   -> case ds of wild1 { (,) s' a7 ->
+                      Data.Either.Right
+                        @ GHC.Base.String
+                        @ (Calc.Lexer.AlexState, Calc.Data.Program)
+                        (s',
+                         a7
+                           `cast`
+                         (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Program)) } }) -}
+f6a44fc9e015225c0ef7fa790d46892a
+  newtype HappyAbsSyn = HappyAbsSyn Calc.Parser.HappyAny
+e06175f296e74c3b745336fc79bcb84c
+  data HappyAddr = HappyA# GHC.Prim.Addr#
+73f45b04609c7baee138549e711f1e84
+  type HappyAny = GHC.Prim.Any
+f17025b790ebfadf4548b8d70a2c269a
+  data HappyStk a = HappyStk a (Calc.Parser.HappyStk a)
+    RecFlag: Recursive
+    Promotable
+0f5b2c58e89dfe001ea13b8d1b902b9c
+  data Happy_IntList
+    = HappyCons GHC.Prim.Int# Calc.Parser.Happy_IntList
+    RecFlag: Recursive
+6e55e5b55928ac347ebb3f847081389d
+  happyAccept ::
+    forall t t1 a.
+    GHC.Prim.Int#
+    -> t
+    -> GHC.Prim.Int#
+    -> t1
+    -> Calc.Parser.HappyStk a
+    -> Calc.Base.Parser a
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <S,1*U><L,A><L,A><L,A><S,1*U(U,1*U)><L,U>m2,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyAccept1
+                  `cast`
+                (forall t t1 a7.
+                 <GHC.Prim.Int#>_R
+                 ->_R <t>_R
+                 ->_R <GHC.Prim.Int#>_R
+                 ->_R <t1>_R
+                 ->_R <Calc.Parser.HappyStk a7>_R
+                 ->_R Sym (Calc.Lexer.NTCo:Alex[0] <a7>_R)) -}
+5f4823e8bd6331b2dd3630b247b82714
+  happyAccept1 ::
+    forall t t1 a.
+    GHC.Prim.Int#
+    -> t
+    -> GHC.Prim.Int#
+    -> t1
+    -> Calc.Parser.HappyStk a
+    -> Calc.Lexer.AlexState
+    -> Data.Either.Either GHC.Base.String (Calc.Lexer.AlexState, a)
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <S,1*U><L,A><L,A><L,A><S,1*U(U,1*U)><L,U>m2,
+     Unfolding: InlineRule (6, True, False)
+                (\ @ t
+                   @ t1
+                   @ a7
+                   ds :: GHC.Prim.Int#
+                   tk :: t
+                   st :: GHC.Prim.Int#
+                   sts :: t1
+                   ds1 :: Calc.Parser.HappyStk a7
+                   eta :: Calc.Lexer.AlexState ->
+                 case ds of ds2 {
+                   DEFAULT
+                   -> case ds1 of wild { Calc.Parser.HappyStk ans ds3 ->
+                      Calc.Lexer.$fApplicativeAlex4 @ a7 ans eta }
+                   0
+                   -> case ds1 of wild { Calc.Parser.HappyStk ds3 ds4 ->
+                      case ds4 of wild1 { Calc.Parser.HappyStk ans ds5 ->
+                      Calc.Lexer.$fApplicativeAlex4 @ a7 ans eta } } }) -}
+843e68862865fc8e0145b3c9fc52364d
+  happyActOffsets :: Calc.Parser.HappyAddr
+  {- HasNoCafRefs, Strictness: m, Inline: NOINLINE -}
+c0b4e2230fe5018cd27a48cda6d3dec3
+  happyCheck :: Calc.Parser.HappyAddr
+  {- HasNoCafRefs, Strictness: m, Inline: NOINLINE -}
+47c9ff6a3505531fe7cdb7b09cdc1dee
+  happyDefActions :: Calc.Parser.HappyAddr
+  {- HasNoCafRefs, Strictness: m, Inline: NOINLINE -}
+512ee896059f05e0cc8ae83f95f86396
+  happyDoAction ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 3, Strictness: <L,U><L,U><L,U>, Inline: NOINLINE -}
+2b43ce9f2777121ae78fd619925398d8
+  happyDoSeq :: forall a b. a -> b -> b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a7 @ b a8 :: a7 b1 :: b -> case a8 of a9 { DEFAULT -> b1 }) -}
+4b72711d3686e05e21f9facf761ac8fc
+  happyDontSeq :: forall a b. a -> b -> b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a7 @ b a8 :: a7 b1 :: b -> b1) -}
+488357564b50cf65145cc857c5b1bc6c
+  happyDrop ::
+    GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList -> Calc.Parser.Happy_IntList
+  {- Arity: 2, HasNoCafRefs -}
+0910fe0e711aafe72635e695b2d305f3
+  happyDropStk ::
+    forall t.
+    GHC.Prim.Int# -> Calc.Parser.HappyStk t -> Calc.Parser.HappyStk t
+  {- Arity: 2, HasNoCafRefs -}
+b0c956196aa1d2e4ba22b5153e272fe3
+  happyError' :: forall a. Calc.Lexer.Token -> Calc.Base.Parser a
+  {- Arity: 2, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyError'1
+                  `cast`
+                (forall a7.
+                 <Calc.Lexer.Token>_R ->_R Sym (Calc.Lexer.NTCo:Alex[0] <a7>_R)) -}
+aa11fa2f5cca99e85781affd42aff967
+  happyError'1 ::
+    forall a.
+    Calc.Lexer.Token
+    -> Calc.Lexer.AlexState
+    -> Data.Either.Either GHC.Base.String (Calc.Lexer.AlexState, a)
+  {- Arity: 2, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a7 tk :: Calc.Lexer.Token eta :: Calc.Lexer.AlexState ->
+                 Calc.Base.happyError1 @ a7 eta) -}
+636dfd45acc4103352361a9abb6837f4
+  happyError_ ::
+    forall a. GHC.Prim.Int# -> Calc.Lexer.Token -> Calc.Base.Parser a
+  {- Arity: 3, Strictness: <L,A><L,A><S,1*U(A,U,U,A,A,A,A,A)>m1,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyError_1
+                  `cast`
+                (forall a7.
+                 <GHC.Prim.Int#>_R
+                 ->_R <Calc.Lexer.Token>_R
+                 ->_R Sym (Calc.Lexer.NTCo:Alex[0] <a7>_R)) -}
+6ab193e6f45d791f196178a5871a763f
+  happyError_1 ::
+    forall a.
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> Calc.Lexer.AlexState
+    -> Data.Either.Either GHC.Base.String (Calc.Lexer.AlexState, a)
+  {- Arity: 3, Strictness: <L,A><L,A><S,1*U(A,U,U,A,A,A,A,A)>m1,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ a7
+                   ds :: GHC.Prim.Int#
+                   tk :: Calc.Lexer.Token
+                   eta :: Calc.Lexer.AlexState ->
+                 Calc.Base.happyError1 @ a7 eta) -}
+7fdf0d0752549f3d6e54b915acf635e5
+  happyFail ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5, Strictness: <S,1*U><L,U><L,U><L,U><L,U(U,U)>,
+     Inline: NOINLINE -}
+e9b3af2adf48516851149e0f7985861f
+  happyGoto ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 4, Strictness: <L,U><L,U><L,U><L,U>, Inline: NOINLINE -}
+70c63c98707f955450cf61a6828eef20
+  happyGotoOffsets :: Calc.Parser.HappyAddr
+  {- HasNoCafRefs, Strictness: m, Inline: NOINLINE -}
+5fbbc4329b0ab966e8516a0fef81cb9d
+  happyIn4 :: Calc.Data.Program -> Calc.Parser.HappyAbsSyn
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, True)
+                (\ x :: Calc.Data.Program -> x)
+                  `cast`
+                (<Calc.Data.Program>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Program Calc.Parser.HappyAbsSyn) -}
+9a10c2693e8993be079183aa9c74c7db
+  happyIn5 :: Calc.Data.Exp -> Calc.Parser.HappyAbsSyn
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, True)
+                (\ x :: Calc.Data.Exp -> x)
+                  `cast`
+                (<Calc.Data.Exp>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+6a880ff4d69964b95705d588b6971d2a
+  happyIn6 :: Calc.Data.CaseNil -> Calc.Parser.HappyAbsSyn
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, True)
+                (\ x :: Calc.Data.CaseNil -> x)
+                  `cast`
+                (<Calc.Data.CaseNil>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.CaseNil Calc.Parser.HappyAbsSyn) -}
+9411fa81852f493bb89e6abc250f46d7
+  happyIn7 :: Calc.Data.CaseCons -> Calc.Parser.HappyAbsSyn
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U)>m,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, True)
+                (\ x :: Calc.Data.CaseCons -> x)
+                  `cast`
+                (<Calc.Data.CaseCons>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.CaseCons Calc.Parser.HappyAbsSyn) -}
+c6255449cfa08358380a8213e9ac1de0
+  happyIn8 :: Calc.Data.Var -> Calc.Parser.HappyAbsSyn
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, True)
+                (\ x :: Calc.Data.Var -> x)
+                  `cast`
+                (<Calc.Data.Var>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Var Calc.Parser.HappyAbsSyn) -}
+09673e9a6f00740bbbfe36f233c38df8
+  happyInTok :: Calc.Lexer.Token -> Calc.Parser.HappyAbsSyn
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, True)
+                (\ x :: Calc.Lexer.Token -> x)
+                  `cast`
+                (<Calc.Lexer.Token>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Lexer.Token Calc.Parser.HappyAbsSyn) -}
+e0224495492f6438b559cfa48478c120
+  happyMonad2Reduce ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> (Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+        -> Calc.Lexer.Token -> Calc.Base.Parser Calc.Parser.HappyAbsSyn)
+    -> GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 8,
+     Strictness: <L,U><L,U><L,1*C1(C1(U))><S,1*U><L,U><L,U><L,U(U,U(U,U(U,U(U,U(U,U(U,U(U,U(U,U))))))))><L,U(U,U(U,U(U,U(U,U(U,U(U,U(U,U(U,U(U,U)))))))))>,
+     Unfolding: (\ k :: GHC.Prim.Int#
+                   nt :: GHC.Prim.Int#
+                   fn :: Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+                         -> Calc.Lexer.Token -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+                   ds :: GHC.Prim.Int#
+                   tk :: Calc.Lexer.Token
+                   st :: GHC.Prim.Int#
+                   sts :: Calc.Parser.Happy_IntList
+                   stk :: Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn ->
+                 case ds of ds1 {
+                   DEFAULT
+                   -> case Calc.Parser.happyDrop
+                             k
+                             (Calc.Parser.HappyCons
+                                st
+                                sts) of wild { Calc.Parser.HappyCons st1 ds2 ->
+                      case Calc.Parser.happyGotoOffsets of wild1 { Calc.Parser.HappyA# arr ->
+                      case Calc.Parser.happyTable of wild2 { Calc.Parser.HappyA# arr1 ->
+                      let {
+                        off' :: GHC.Prim.Int# = GHC.Prim.*# st1 2
+                      } in
+                      case GHC.Prim.indexCharOffAddr# arr off' of wild3 { DEFAULT ->
+                      case GHC.Prim.indexCharOffAddr#
+                             arr
+                             (GHC.Prim.+# off' 1) of wild4 { DEFAULT ->
+                      let {
+                        off'1 :: GHC.Prim.Int#
+                        = GHC.Prim.*#
+                            (GHC.Prim.+#
+                               (GHC.Prim.narrow16Int#
+                                  (GHC.Prim.word2Int#
+                                     (GHC.Prim.or#
+                                        (GHC.Prim.uncheckedShiftL#
+                                           (GHC.Prim.int2Word# (GHC.Prim.ord# wild4))
+                                           8)
+                                        (GHC.Prim.int2Word# (GHC.Prim.ord# wild3)))))
+                               nt)
+                            2
+                      } in
+                      case GHC.Prim.indexCharOffAddr# arr1 off'1 of wild5 { DEFAULT ->
+                      case GHC.Prim.indexCharOffAddr#
+                             arr1
+                             (GHC.Prim.+# off'1 1) of wild6 { DEFAULT ->
+                      let {
+                        new_state :: GHC.Prim.Int#
+                        = GHC.Prim.narrow16Int#
+                            (GHC.Prim.word2Int#
+                               (GHC.Prim.or#
+                                  (GHC.Prim.uncheckedShiftL#
+                                     (GHC.Prim.int2Word# (GHC.Prim.ord# wild6))
+                                     8)
+                                  (GHC.Prim.int2Word# (GHC.Prim.ord# wild5))))
+                      } in
+                      let {
+                        drop_stk :: Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+                        = Calc.Parser.happyDropStk @ Calc.Parser.HappyAbsSyn k stk
+                      } in
+                      let {
+                        m :: Calc.Lexer.Alex Calc.Parser.HappyAbsSyn = fn stk tk
+                      } in
+                      (\ s :: Calc.Lexer.AlexState ->
+                       case m `cast` (Calc.Lexer.NTCo:Alex[0] <Calc.Parser.HappyAbsSyn>_R)
+                              s of wild7 {
+                         Data.Either.Left msg -> wild7
+                         Data.Either.Right ds3
+                         -> case ds3 of wild8 { (,) s' a7 ->
+                            case s' of ww { Calc.Lexer.AlexState ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ->
+                            Calc.Parser.$wa
+                              new_state
+                              wild
+                              (Calc.Parser.HappyStk @ Calc.Parser.HappyAbsSyn a7 drop_stk)
+                              ww1
+                              ww2
+                              ww3
+                              ww4
+                              ww5
+                              ww6
+                              ww7
+                              ww8 } } })
+                        `cast`
+                      (Sym (Calc.Lexer.NTCo:Alex[0]
+                                <Calc.Parser.HappyAbsSyn>_R)) } } } } } } }
+                   0 -> Calc.Parser.happyFail 0 tk st sts stk }) -}
+71d1b9edac9ced61755265f100926f96
+  happyMonadReduce ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> (Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+        -> Calc.Lexer.Token -> Calc.Base.Parser Calc.Parser.HappyAbsSyn)
+    -> GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 8,
+     Strictness: <L,U><L,U><L,1*C1(C1(U))><S,1*U><L,U><L,U><L,U(U,U(U,U(U,U(U,U(U,U(U,U(U,U(U,U))))))))><L,U(U,U(U,U(U,U(U,U(U,U(U,U(U,U(U,U(U,U)))))))))>,
+     Inline: NOINLINE -}
+bd8b2d63722d191099a06a9a9410cd02
+  happyNewToken ::
+    GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 4, Strictness: <L,U><L,U><L,U><S,1*U(U,U,U,U,U,U,U,U)>,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyNewToken1
+                  `cast`
+                (<GHC.Prim.Int#>_R
+                 ->_R <Calc.Parser.Happy_IntList>_R
+                 ->_R <Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn>_R
+                 ->_R Sym (Calc.Lexer.NTCo:Alex[0] <Calc.Parser.HappyAbsSyn>_R)) -}
+8227c733038d45c3668e9cbc05c46bae
+  happyNewToken1 ::
+    GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Lexer.AlexState
+    -> Data.Either.Either
+         GHC.Base.String (Calc.Lexer.AlexState, Calc.Parser.HappyAbsSyn)
+  {- Arity: 4, Strictness: <L,U><L,U><L,U><S,1*U(U,U,U,U,U,U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ w :: GHC.Prim.Int#
+                   w1 :: Calc.Parser.Happy_IntList
+                   w2 :: Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+                   w3 :: Calc.Lexer.AlexState ->
+                 case w3 of ww { Calc.Lexer.AlexState ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ->
+                 Calc.Parser.$wa w w1 w2 ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 }) -}
+ccdddf4cf38467d82504c099fa8b1404
+  happyOut4 :: Calc.Parser.HappyAbsSyn -> Calc.Data.Program
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, True)
+                (\ x :: Calc.Parser.HappyAbsSyn -> x)
+                  `cast`
+                (<Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Program) -}
+20250d1eb76d04469c7fa2438e4bab3b
+  happyOut5 :: Calc.Parser.HappyAbsSyn -> Calc.Data.Exp
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, True)
+                (\ x :: Calc.Parser.HappyAbsSyn -> x)
+                  `cast`
+                (<Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp) -}
+5377caa0eb70af3de3da7698d68afa43
+  happyOut6 :: Calc.Parser.HappyAbsSyn -> Calc.Data.CaseNil
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, True)
+                (\ x :: Calc.Parser.HappyAbsSyn -> x)
+                  `cast`
+                (<Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.CaseNil) -}
+bb0ef7e67b4a5fa83aff27f5a2f8cbbf
+  happyOut7 :: Calc.Parser.HappyAbsSyn -> Calc.Data.CaseCons
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, True)
+                (\ x :: Calc.Parser.HappyAbsSyn -> x)
+                  `cast`
+                (<Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.CaseCons) -}
+908f02021069072b7dad327d608fc93b
+  happyOut8 :: Calc.Parser.HappyAbsSyn -> Calc.Data.Var
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, True)
+                (\ x :: Calc.Parser.HappyAbsSyn -> x)
+                  `cast`
+                (<Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Var) -}
+53f485c3ba81538a35caf1c05a1d2422
+  happyOutTok :: Calc.Parser.HappyAbsSyn -> Calc.Lexer.Token
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, True)
+                (\ x :: Calc.Parser.HappyAbsSyn -> x)
+                  `cast`
+                (<Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Lexer.Token) -}
+2c10307b2cf34217b7ae26538364da27
+  happyParse ::
+    GHC.Prim.Int# -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 2, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyParse1
+                  `cast`
+                (<GHC.Prim.Int#>_R
+                 ->_R Sym (Calc.Lexer.NTCo:Alex[0] <Calc.Parser.HappyAbsSyn>_R)) -}
+50fdb6c1767b89c5f1341403d9b96240
+  happyParse1 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.AlexState
+    -> Data.Either.Either
+         GHC.Base.String (Calc.Lexer.AlexState, Calc.Parser.HappyAbsSyn)
+  {- Arity: 2, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ start_state :: GHC.Prim.Int# eta :: Calc.Lexer.AlexState ->
+                 Calc.Parser.happyNewToken1
+                   start_state
+                   (Calc.Parser.notHappyAtAll @ Calc.Parser.Happy_IntList)
+                   (Calc.Parser.notHappyAtAll
+                      @ (Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn))
+                   eta) -}
+c0cbbf859eb3dff0e1baeceaf24ea9dc
+  happyParser :: Calc.Base.Parser Calc.Data.Program
+  {- Arity: 1, Strictness: <S,1*U(U,U,U,U,U,U,U,U)>,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyParser1
+                  `cast`
+                (Sym (Calc.Lexer.NTCo:Alex[0] <Calc.Data.Program>_R)) -}
+5d9f50fa69ea165a4dab20702de62814
+  happyParser1 ::
+    Calc.Lexer.AlexState
+    -> Data.Either.Either
+         GHC.Base.String (Calc.Lexer.AlexState, Calc.Data.Program)
+  {- Arity: 1, Strictness: <S,1*U(U,U,U,U,U,U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Calc.Lexer.AlexState ->
+                 case w of ww { Calc.Lexer.AlexState ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ->
+                 Calc.Parser.$wa1 ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 }) -}
+38cef58145cb51cac36de1095b0327ea
+  happyReduce ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> (Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+        -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn)
+    -> GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 8,
+     Strictness: <L,U><L,U><L,1*C1(U(U,U))><S,1*U><L,U><L,U><L,U(U,U(U,U(U,U(U,U(U,U(U,U(U,U(U,U(U,U)))))))))><L,U(U,U)>,
+     Inline: NOINLINE -}
+0d0ee5c52fbf02aa76a5f07905327eae
+  happyReduceArr ::
+    GHC.Arr.Array
+      GHC.Types.Int
+      (GHC.Prim.Int#
+       -> Calc.Lexer.Token
+       -> GHC.Prim.Int#
+       -> Calc.Parser.Happy_IntList
+       -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+       -> Calc.Base.Parser Calc.Parser.HappyAbsSyn)
+e64b4360f44c53aaec075476876c410e
+  happyReduce_1 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5,
+     Unfolding: (Calc.Parser.happyReduce_1_happySpecReduce_3
+                   0
+                   (Calc.Parser.happyReduce_29 @ Calc.Parser.HappyAbsSyn)
+                     `cast`
+                   (<Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R UnivCo mkUnsafeCo representational Calc.Data.Program Calc.Parser.HappyAbsSyn)) -}
+74ba18879135553d86ec4cd8388639ce
+  happyReduce_10 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5,
+     Unfolding: (Calc.Parser.happyReduce_1_happySpecReduce_3
+                   1
+                   (Calc.Parser.happyReduce_30 @ Calc.Parser.HappyAbsSyn)
+                     `cast`
+                   (<Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn)) -}
+70b39abc17a29fc22a5b2938aeeb99aa
+  happyReduce_11 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5,
+     Unfolding: (Calc.Parser.happyReduce_1_happySpecReduce_3
+                   1
+                   (Calc.Parser.happyReduce_31 @ Calc.Parser.HappyAbsSyn)
+                     `cast`
+                   (<Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn)) -}
+2beb1d1033959c49e60d9dfde29e353a
+  happyReduce_12 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5,
+     Unfolding: (Calc.Parser.happyReduce_1_happySpecReduce_3
+                   1
+                   (Calc.Parser.happyReduce_32 @ Calc.Parser.HappyAbsSyn)
+                     `cast`
+                   (<Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn)) -}
+97c02a6789556b4fa6d3b5791741cc7d
+  happyReduce_13 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5,
+     Unfolding: (Calc.Parser.happyReduce_1_happySpecReduce_3
+                   1
+                   (Calc.Parser.happyReduce_33 @ Calc.Parser.HappyAbsSyn)
+                     `cast`
+                   (<Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn)) -}
+84ed525ac19b0b7702626444b774791d
+  happyReduce_14 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5,
+     Unfolding: (Calc.Parser.happyReduce_1_happySpecReduce_3
+                   1
+                   (Calc.Parser.happyReduce_34 @ Calc.Parser.HappyAbsSyn)
+                     `cast`
+                   (<Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn)) -}
+bb78cd9aa29a6b7b75b8a0ddc0ba7f56
+  happyReduce_15 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5,
+     Unfolding: (Calc.Parser.happyReduce_1_happySpecReduce_3
+                   1
+                   (Calc.Parser.happyReduce_35 @ Calc.Parser.HappyAbsSyn)
+                     `cast`
+                   (<Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn)) -}
+886c9252f92c500c10e83a72d68d4b47
+  happyReduce_16 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5,
+     Unfolding: (Calc.Parser.happyReduce_1_happySpecReduce_3
+                   1
+                   (Calc.Parser.happyReduce_36 @ Calc.Parser.HappyAbsSyn)
+                     `cast`
+                   (<Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn)) -}
+6d724f4cf2ed90b0530a39738ff65479
+  happyReduce_17 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5 -}
+6f0fc46bff96dec6dfc58674abb4af64
+  happyReduce_18 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5,
+     Unfolding: (Calc.Parser.happyReduce_1_happySpecReduce_3
+                   1
+                   (Calc.Parser.happyReduce_37
+                      @ Calc.Parser.HappyAbsSyn
+                      @ Calc.Parser.HappyAbsSyn)
+                     `cast`
+                   (<Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn)) -}
+255db5af0f067196b593fca943ae3be0
+  happyReduce_19 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5 -}
+d0c0dd1df03d99a1d7bf794101b4620d
+  happyReduce_1_happySpecReduce_3 ::
+    GHC.Prim.Int#
+    -> (Calc.Parser.HappyAbsSyn
+        -> Calc.Parser.HappyAbsSyn
+        -> Calc.Parser.HappyAbsSyn
+        -> Calc.Parser.HappyAbsSyn)
+    -> GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 7,
+     Strictness: <L,U><L,1*C1(C1(C1(U)))><S,1*U><L,U><L,U><L,U(U,U)><L,U(U,U)>,
+     Inline: NOINLINE -}
+3809e7bd9ddfce31a00256e6b932e239
+  happyReduce_2 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5 -}
+39ed85d2a856e1c59f9994a5e9ebe3b6
+  happyReduce_20 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5 -}
+ca5ef3ec32c3d6ebd50995de0e91429f
+  happyReduce_21 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5 -}
+50ae92765ab1efb2705d1ba0405153d1
+  happyReduce_22 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5 -}
+116b167d6bbb26b44b80ceeaa6b7e22c
+  happyReduce_23 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5 -}
+968a70b0629a9ed2868342a5bb512dc2
+  happyReduce_24 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5,
+     Unfolding: (Calc.Parser.happyReduce_1_happySpecReduce_3
+                   2
+                   (Calc.Parser.happyReduce_38
+                      @ Calc.Parser.HappyAbsSyn
+                      @ Calc.Parser.HappyAbsSyn)
+                     `cast`
+                   (<Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R UnivCo mkUnsafeCo representational Calc.Data.CaseNil Calc.Parser.HappyAbsSyn)) -}
+cba01f39e2b708ecc111bbfbdf4e9f05
+  happyReduce_25 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5 -}
+c7dbded80ca7de76db40d0792e3192db
+  happyReduce_26 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5 -}
+dd6f56e61ffeb413d6db3edce8df3dfc
+  happyReduce_29 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Data.Program
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ t
+                   happy_x_3 :: Calc.Parser.HappyAbsSyn
+                   happy_x_2 :: t
+                   happy_x_1 :: Calc.Parser.HappyAbsSyn ->
+                 Calc.Data.DefEq
+                   happy_x_1
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Var)
+                   happy_x_3
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)) -}
+3f34009e2f5e6348d0d39604aba961a8
+  happyReduce_3 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5 -}
+214c5485db0e0dd5597fe53a5d967824
+  happyReduce_30 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Data.Exp
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m20,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ t
+                   happy_x_3 :: Calc.Parser.HappyAbsSyn
+                   happy_x_2 :: t
+                   happy_x_1 :: Calc.Parser.HappyAbsSyn ->
+                 Calc.Data.OpLT
+                   happy_x_1
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)
+                   happy_x_3
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)) -}
+a96df7ad9d7d6a96fb2909d6caddf9a8
+  happyReduce_31 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Data.Exp
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m21,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ t
+                   happy_x_3 :: Calc.Parser.HappyAbsSyn
+                   happy_x_2 :: t
+                   happy_x_1 :: Calc.Parser.HappyAbsSyn ->
+                 Calc.Data.OpEq
+                   happy_x_1
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)
+                   happy_x_3
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)) -}
+5d927810a21fc7a29cb541527aa927be
+  happyReduce_32 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Data.Exp
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m13,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ t
+                   happy_x_3 :: Calc.Parser.HappyAbsSyn
+                   happy_x_2 :: t
+                   happy_x_1 :: Calc.Parser.HappyAbsSyn ->
+                 Calc.Data.Cons
+                   happy_x_1
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)
+                   happy_x_3
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)) -}
+c70ffccf02d09a8695328ff7e40aacfc
+  happyReduce_33 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Data.Exp
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m15,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ t
+                   happy_x_3 :: Calc.Parser.HappyAbsSyn
+                   happy_x_2 :: t
+                   happy_x_1 :: Calc.Parser.HappyAbsSyn ->
+                 Calc.Data.Add
+                   happy_x_1
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)
+                   happy_x_3
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)) -}
+f5a14c5116fa48776b4a6cc8daae0919
+  happyReduce_34 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Data.Exp
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m16,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ t
+                   happy_x_3 :: Calc.Parser.HappyAbsSyn
+                   happy_x_2 :: t
+                   happy_x_1 :: Calc.Parser.HappyAbsSyn ->
+                 Calc.Data.Sub
+                   happy_x_1
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)
+                   happy_x_3
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)) -}
+b7fbab8eebbca4962a6683ec378b9969
+  happyReduce_35 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Data.Exp
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m17,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ t
+                   happy_x_3 :: Calc.Parser.HappyAbsSyn
+                   happy_x_2 :: t
+                   happy_x_1 :: Calc.Parser.HappyAbsSyn ->
+                 Calc.Data.Mul
+                   happy_x_1
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)
+                   happy_x_3
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)) -}
+2bb39150a8678a65a877e77be6b3b3c2
+  happyReduce_36 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Data.Exp
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m18,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ t
+                   happy_x_3 :: Calc.Parser.HappyAbsSyn
+                   happy_x_2 :: t
+                   happy_x_1 :: Calc.Parser.HappyAbsSyn ->
+                 Calc.Data.Div
+                   happy_x_1
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)
+                   happy_x_3
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)) -}
+95c9352f68979184e189dd9ec6e42001
+  happyReduce_37 ::
+    forall t t1. t -> Calc.Parser.HappyAbsSyn -> t1 -> Calc.Data.Exp
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><L,U><L,A>m6,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ t
+                   @ t1
+                   happy_x_3 :: t
+                   happy_x_2 :: Calc.Parser.HappyAbsSyn
+                   happy_x_1 :: t1 ->
+                 Calc.Data.Brack
+                   happy_x_2
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)) -}
+8f44e6e7aa39a6df03bf4c1aa2353bb6
+  happyReduce_38 ::
+    forall t t1.
+    Calc.Parser.HappyAbsSyn -> t -> t1 -> Calc.Data.CaseNil
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,A>m,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ t
+                   @ t1
+                   happy_x_3 :: Calc.Parser.HappyAbsSyn
+                   happy_x_2 :: t
+                   happy_x_1 :: t1 ->
+                 Calc.Data.CaseNil
+                   happy_x_3
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)) -}
+e4297b022e9bfc81db56938096055d3e
+  happyReduce_39 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Data.Exp
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m9,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ t
+                   happy_x_3 :: Calc.Parser.HappyAbsSyn
+                   happy_x_2 :: t
+                   happy_x_1 :: Calc.Parser.HappyAbsSyn ->
+                 Calc.Data.And
+                   happy_x_1
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)
+                   happy_x_3
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)) -}
+d6b3b4ad798e7770832d0b6cbb6ba00e
+  happyReduce_4 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5 -}
+21ab35917099d107bc1d6e8a8959de45
+  happyReduce_40 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Data.Exp
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m10,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ t
+                   happy_x_3 :: Calc.Parser.HappyAbsSyn
+                   happy_x_2 :: t
+                   happy_x_1 :: Calc.Parser.HappyAbsSyn ->
+                 Calc.Data.Or
+                   happy_x_1
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)
+                   happy_x_3
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)) -}
+61b64355f63753bdee3ca77eeddf1a28
+  happyReduce_41 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Data.Exp
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m19,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ t
+                   happy_x_3 :: Calc.Parser.HappyAbsSyn
+                   happy_x_2 :: t
+                   happy_x_1 :: Calc.Parser.HappyAbsSyn ->
+                 Calc.Data.OpGT
+                   happy_x_1
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)
+                   happy_x_3
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)) -}
+da2f55e6e5e55284a93fbb56badab2f5
+  happyReduce_5 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5 -}
+43e6609f92e20559dd4786c2912e3194
+  happyReduce_6 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5 -}
+c867025265b7382128f76d09d5220808
+  happyReduce_7 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5,
+     Unfolding: (Calc.Parser.happyReduce_1_happySpecReduce_3
+                   1
+                   (Calc.Parser.happyReduce_39 @ Calc.Parser.HappyAbsSyn)
+                     `cast`
+                   (<Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn)) -}
+40c98e3344aeaed894b158381cb0c1e3
+  happyReduce_8 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5,
+     Unfolding: (Calc.Parser.happyReduce_1_happySpecReduce_3
+                   1
+                   (Calc.Parser.happyReduce_40 @ Calc.Parser.HappyAbsSyn)
+                     `cast`
+                   (<Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn)) -}
+5da0d52c5009840d22469b6be8d1a9ab
+  happyReduce_9 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 5,
+     Unfolding: (Calc.Parser.happyReduce_1_happySpecReduce_3
+                   1
+                   (Calc.Parser.happyReduce_41 @ Calc.Parser.HappyAbsSyn)
+                     `cast`
+                   (<Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R <Calc.Parser.HappyAbsSyn>_R
+                    ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn)) -}
+fbf1961756ff2c4af3867fe6e695affa
+  happyReduction_1 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduce_29
+                  `cast`
+                (forall t.
+                 <Calc.Parser.HappyAbsSyn>_R
+                 ->_R <t>_R
+                 ->_R <Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Program Calc.Parser.HappyAbsSyn) -}
+0ff31df2844d2a084a9cd6992ba95376
+  happyReduction_10 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m20,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduce_30
+                  `cast`
+                (forall t.
+                 <Calc.Parser.HappyAbsSyn>_R
+                 ->_R <t>_R
+                 ->_R <Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+5b431db23f3b3a5542f174d1c9ad832e
+  happyReduction_11 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m21,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduce_31
+                  `cast`
+                (forall t.
+                 <Calc.Parser.HappyAbsSyn>_R
+                 ->_R <t>_R
+                 ->_R <Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+c5f4f592930f8420de0a3163a6f29524
+  happyReduction_12 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m13,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduce_32
+                  `cast`
+                (forall t.
+                 <Calc.Parser.HappyAbsSyn>_R
+                 ->_R <t>_R
+                 ->_R <Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+35b2c50e6f363db154ffdbce22162b0d
+  happyReduction_13 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m15,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduce_33
+                  `cast`
+                (forall t.
+                 <Calc.Parser.HappyAbsSyn>_R
+                 ->_R <t>_R
+                 ->_R <Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+7428568b1e7a6f70b349c42116f6c523
+  happyReduction_14 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m16,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduce_34
+                  `cast`
+                (forall t.
+                 <Calc.Parser.HappyAbsSyn>_R
+                 ->_R <t>_R
+                 ->_R <Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+5b3568b7ecb6d7d4da78ac74f605849f
+  happyReduction_15 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m17,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduce_35
+                  `cast`
+                (forall t.
+                 <Calc.Parser.HappyAbsSyn>_R
+                 ->_R <t>_R
+                 ->_R <Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+be7ed253b7e9c99abdd36f10495313b0
+  happyReduction_16 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m18,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduce_36
+                  `cast`
+                (forall t.
+                 <Calc.Parser.HappyAbsSyn>_R
+                 ->_R <t>_R
+                 ->_R <Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+820d04de7e4c46ee75c65364dff37b43
+  happyReduction_17 ::
+    forall t. Calc.Parser.HappyAbsSyn -> t -> Calc.Parser.HappyAbsSyn
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,A>m11,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduction_29
+                  `cast`
+                (forall t.
+                 <Calc.Parser.HappyAbsSyn>_R
+                 ->_R <t>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+fb9c2ea819d762c451e079aee680cc20
+  happyReduction_18 ::
+    forall t t1.
+    t -> Calc.Parser.HappyAbsSyn -> t1 -> Calc.Parser.HappyAbsSyn
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,A><L,U><L,A>m6,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduce_37
+                  `cast`
+                (forall t t1.
+                 <t>_R
+                 ->_R <Calc.Parser.HappyAbsSyn>_R
+                 ->_R <t1>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+d6ec59ba7df54844b57f6a82294dc0f5
+  happyReduction_19 ::
+    Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m22,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Data.ExpVar
+                  `cast`
+                (UnivCo mkUnsafeCo representational Calc.Data.Var Calc.Parser.HappyAbsSyn
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+bd6d2cc014bfb8af608ba4de60b749d7
+  happyReduction_2 ::
+    Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(U,1*U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn ->
+                 case ds of wild { Calc.Parser.HappyStk happy_x_6 ds1 ->
+                 case ds1 of wild1 { Calc.Parser.HappyStk happy_x_5 ds2 ->
+                 case ds2 of wild2 { Calc.Parser.HappyStk happy_x_4 ds3 ->
+                 case ds3 of wild3 { Calc.Parser.HappyStk happy_x_3 ds4 ->
+                 case ds4 of wild4 { Calc.Parser.HappyStk happy_x_2 ds5 ->
+                 case ds5 of wild5 { Calc.Parser.HappyStk happy_x_1 happyRest ->
+                 Calc.Parser.HappyStk
+                   @ Calc.Parser.HappyAbsSyn
+                   (Calc.Data.Let
+                      happy_x_2
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Var)
+                      happy_x_4
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)
+                      happy_x_6
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp))
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn)
+                   happyRest } } } } } }) -}
+affc34fba0ec133aea1efbc6a2a57fcd
+  happyReduction_20 ::
+    Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn
+  {- Arity: 1, Strictness: <S,1*U>m14,
+     Unfolding: InlineRule (1, True, False)
+                (\ happy_x_1 :: Calc.Parser.HappyAbsSyn ->
+                 case happy_x_1
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Lexer.Token) of wild { Calc.Lexer.Token ds ds1 ->
+                 case ds1 of wild1 {
+                   DEFAULT -> Calc.Parser.happyReduction_30
+                   Calc.Lexer.TokenInt happy_var_1
+                   -> (Calc.Data.Int happy_var_1)
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) } }) -}
+885aa4694ddbe8d7f0b4904bb7e25c58
+  happyReduction_21 :: forall t. t -> Calc.Parser.HappyAbsSyn
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduction_31
+                  `cast`
+                (forall t.
+                 <t>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+716caaa40d0f9a915246ec124a40100b
+  happyReduction_22 :: forall t. t -> Calc.Parser.HappyAbsSyn
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduction_32
+                  `cast`
+                (forall t.
+                 <t>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+a5417f82af373644dd1b72cf39933a4f
+  happyReduction_23 :: forall t. t -> Calc.Parser.HappyAbsSyn
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduction_33
+                  `cast`
+                (forall t.
+                 <t>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+a7cbd1ad6ded716dc7898425ff45e21b
+  happyReduction_24 ::
+    forall t t1.
+    Calc.Parser.HappyAbsSyn -> t -> t1 -> Calc.Parser.HappyAbsSyn
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,A>m,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduce_38
+                  `cast`
+                (forall t t1.
+                 <Calc.Parser.HappyAbsSyn>_R
+                 ->_R <t>_R
+                 ->_R <t1>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.CaseNil Calc.Parser.HappyAbsSyn) -}
+2a321e8d02f4de80c74058725435e91a
+  happyReduction_25 ::
+    Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(U,1*U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn ->
+                 case ds of wild { Calc.Parser.HappyStk happy_x_5 ds1 ->
+                 case ds1 of wild1 { Calc.Parser.HappyStk happy_x_4 ds2 ->
+                 case ds2 of wild2 { Calc.Parser.HappyStk happy_x_3 ds3 ->
+                 case ds3 of wild3 { Calc.Parser.HappyStk happy_x_2 ds4 ->
+                 case ds4 of wild4 { Calc.Parser.HappyStk happy_x_1 happyRest ->
+                 Calc.Parser.HappyStk
+                   @ Calc.Parser.HappyAbsSyn
+                   (Calc.Data.CaseCons
+                      happy_x_1
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Var)
+                      happy_x_3
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Var)
+                      happy_x_5
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp))
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Data.CaseCons Calc.Parser.HappyAbsSyn)
+                   happyRest } } } } }) -}
+4c4b4a7bceb683b30bc7e92c5f90d23a
+  happyReduction_26 ::
+    Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn
+  {- Arity: 1, Strictness: <S,1*U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ happy_x_1 :: Calc.Parser.HappyAbsSyn ->
+                 case happy_x_1
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Lexer.Token) of wild { Calc.Lexer.Token ds ds1 ->
+                 case ds1 of wild1 {
+                   DEFAULT -> Calc.Parser.happyReduction_34
+                   Calc.Lexer.TokenVar happy_var_1
+                   -> (Calc.Data.Var happy_var_1)
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Data.Var Calc.Parser.HappyAbsSyn) } }) -}
+557855d2d6515d4ebc635297c7eb875d
+  happyReduction_29 ::
+    forall t. Calc.Parser.HappyAbsSyn -> t -> Calc.Data.Exp
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,A>m11,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ t happy_x_2 :: Calc.Parser.HappyAbsSyn happy_x_1 :: t ->
+                 Calc.Data.Not
+                   happy_x_2
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)) -}
+a0d6bfd578a304b5a41744ffe4d3cf56
+  happyReduction_3 ::
+    Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(U,1*U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn ->
+                 case ds of wild { Calc.Parser.HappyStk happy_x_6 ds1 ->
+                 case ds1 of wild1 { Calc.Parser.HappyStk happy_x_5 ds2 ->
+                 case ds2 of wild2 { Calc.Parser.HappyStk happy_x_4 ds3 ->
+                 case ds3 of wild3 { Calc.Parser.HappyStk happy_x_3 ds4 ->
+                 case ds4 of wild4 { Calc.Parser.HappyStk happy_x_2 ds5 ->
+                 case ds5 of wild5 { Calc.Parser.HappyStk happy_x_1 happyRest ->
+                 Calc.Parser.HappyStk
+                   @ Calc.Parser.HappyAbsSyn
+                   (Calc.Data.ITE
+                      happy_x_2
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)
+                      happy_x_4
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)
+                      happy_x_6
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp))
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn)
+                   happyRest } } } } } }) -}
+e335fda7ff1122233f637560d521f9cd
+  happyReduction_30 :: Calc.Parser.HappyAbsSyn
+  {- Strictness: b -}
+2d8d74a041f9ecdadfde171e809fef43
+  happyReduction_31 :: forall t. t -> Calc.Data.Exp
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ t happy_x_1 :: t -> Calc.Data.Nil) -}
+74e8435670f168422d2400bab4e61b92
+  happyReduction_32 :: forall t. t -> Calc.Data.Exp
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ t happy_x_1 :: t -> Calc.Data.ExpTrue) -}
+0574a17aa1735f62424d5f2e28e912fa
+  happyReduction_33 :: forall t. t -> Calc.Data.Exp
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ t happy_x_1 :: t -> Calc.Data.ExpFalse) -}
+2cc056e3b83c84f1c9c5d5b1aef84bdd
+  happyReduction_34 :: Calc.Parser.HappyAbsSyn
+  {- Strictness: b -}
+4512fedb5371a3822ce0dffe7b67e14e
+  happyReduction_35 ::
+    Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn -> Calc.Data.Exp
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m5,
+     Unfolding: InlineRule (2, True, True)
+                (\ happy_x_2 :: Calc.Parser.HappyAbsSyn
+                   happy_x_1 :: Calc.Parser.HappyAbsSyn ->
+                 Calc.Data.App
+                   happy_x_1
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)
+                   happy_x_2
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp)) -}
+67c67bd595dd44687360dc7d9acdb7b5
+  happyReduction_4 ::
+    Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(U,1*U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn ->
+                 case ds of wild { Calc.Parser.HappyStk happy_x_6 ds1 ->
+                 case ds1 of wild1 { Calc.Parser.HappyStk happy_x_5 ds2 ->
+                 case ds2 of wild2 { Calc.Parser.HappyStk happy_x_4 ds3 ->
+                 case ds3 of wild3 { Calc.Parser.HappyStk happy_x_3 ds4 ->
+                 case ds4 of wild4 { Calc.Parser.HappyStk happy_x_2 ds5 ->
+                 case ds5 of wild5 { Calc.Parser.HappyStk happy_x_1 happyRest ->
+                 Calc.Parser.HappyStk
+                   @ Calc.Parser.HappyAbsSyn
+                   (Calc.Data.Case
+                      happy_x_2
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Var)
+                      happy_x_4
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.CaseNil)
+                      happy_x_6
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.CaseCons))
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn)
+                   happyRest } } } } } }) -}
+9bcddb887d2d1bd3c86705510306bda3
+  happyReduction_5 ::
+    Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(U,1*U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn ->
+                 case ds of wild { Calc.Parser.HappyStk happy_x_4 ds1 ->
+                 case ds1 of wild1 { Calc.Parser.HappyStk happy_x_3 ds2 ->
+                 case ds2 of wild2 { Calc.Parser.HappyStk happy_x_2 ds3 ->
+                 case ds3 of wild3 { Calc.Parser.HappyStk happy_x_1 happyRest ->
+                 Calc.Parser.HappyStk
+                   @ Calc.Parser.HappyAbsSyn
+                   (Calc.Data.Lambda
+                      happy_x_2
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Var)
+                      happy_x_4
+                        `cast`
+                      (UnivCo mkUnsafeCo representational Calc.Parser.HappyAbsSyn Calc.Data.Exp))
+                     `cast`
+                   (UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn)
+                   happyRest } } } }) -}
+ed5c06ece8df66daa0eec4bee187f03c
+  happyReduction_6 ::
+    Calc.Parser.HappyAbsSyn
+    -> Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m5,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduction_35
+                  `cast`
+                (<Calc.Parser.HappyAbsSyn>_R
+                 ->_R <Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+1f0de4528882c1519902672935838bc0
+  happyReduction_7 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m9,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduce_39
+                  `cast`
+                (forall t.
+                 <Calc.Parser.HappyAbsSyn>_R
+                 ->_R <t>_R
+                 ->_R <Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+bce7b3fa6f9c06a3a478503618da9205
+  happyReduction_8 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m10,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduce_40
+                  `cast`
+                (forall t.
+                 <Calc.Parser.HappyAbsSyn>_R
+                 ->_R <t>_R
+                 ->_R <Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+105df1a8a7813811328f3e07dc6cc9ea
+  happyReduction_9 ::
+    forall t.
+    Calc.Parser.HappyAbsSyn
+    -> t -> Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,A><L,U>m19,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Parser.happyReduce_41
+                  `cast`
+                (forall t.
+                 <Calc.Parser.HappyAbsSyn>_R
+                 ->_R <t>_R
+                 ->_R <Calc.Parser.HappyAbsSyn>_R
+                 ->_R UnivCo mkUnsafeCo representational Calc.Data.Exp Calc.Parser.HappyAbsSyn) -}
+ad13cf248400b6d060dc8d0505ff1c66
+  happyReturn :: forall a. a -> Calc.Base.Parser a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m2,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Lexer.$fApplicativeAlex4
+                  `cast`
+                (forall a7. <a7>_R ->_R Sym (Calc.Lexer.NTCo:Alex[0] <a7>_R)) -}
+c4d77de96d75b687b44966721e488bcb
+  happyReturn1 :: forall a. a -> Calc.Base.Parser a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m2,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Lexer.$fApplicativeAlex4
+                  `cast`
+                (forall a7. <a7>_R ->_R Sym (Calc.Lexer.NTCo:Alex[0] <a7>_R)) -}
+dbf6ac597f7e96bced06c656d1aeea02
+  happySeq :: forall a b. a -> b -> b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (0, True, True) Calc.Parser.happyDontSeq -}
+df8dee18a35dbf867ce7aaf3bd7bbc60
+  happyShift ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 6, Strictness: <L,U><S,1*U><L,U><L,U><L,U><L,U(U,U)>,
+     Inline: NOINLINE -}
+d0f9892e3505ab377580f6157b7d2395
+  happySpecReduce_0 ::
+    GHC.Prim.Int#
+    -> Calc.Parser.HappyAbsSyn
+    -> GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 7,
+     Strictness: <L,U><L,U><S,1*U><L,U><L,U><L,U><L,U(U,U)>,
+     Inline: NOINLINE -}
+aff95d9be809bc6849f6cc426d4b6e1c
+  happySpecReduce_1 ::
+    GHC.Prim.Int#
+    -> (Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn)
+    -> GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 7,
+     Strictness: <L,U><L,1*C1(U)><S,1*U><L,U><L,U><L,U(U,U)><L,U(U,U)>,
+     Inline: NOINLINE -}
+ea01e956a6870a6302b55aa50256dc13
+  happySpecReduce_2 ::
+    GHC.Prim.Int#
+    -> (Calc.Parser.HappyAbsSyn
+        -> Calc.Parser.HappyAbsSyn -> Calc.Parser.HappyAbsSyn)
+    -> GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 7,
+     Strictness: <L,U><L,1*C1(C1(U))><S,1*U><L,U><L,U><L,U(U,U)><L,U(U,U)>,
+     Inline: NOINLINE -}
+b7c9051f6eb3fce48fdbcf938f32c311
+  happySpecReduce_3 ::
+    GHC.Prim.Int#
+    -> (Calc.Parser.HappyAbsSyn
+        -> Calc.Parser.HappyAbsSyn
+        -> Calc.Parser.HappyAbsSyn
+        -> Calc.Parser.HappyAbsSyn)
+    -> GHC.Prim.Int#
+    -> Calc.Lexer.Token
+    -> GHC.Prim.Int#
+    -> Calc.Parser.Happy_IntList
+    -> Calc.Parser.HappyStk Calc.Parser.HappyAbsSyn
+    -> Calc.Base.Parser Calc.Parser.HappyAbsSyn
+  {- Arity: 7,
+     Strictness: <L,U><L,1*C1(C1(C1(U)))><S,1*U><L,U><L,U><L,U(U,U)><L,U(U,U)>,
+     Inline: NOINLINE -}
+e4c526167cebeae459ed7d0a00a0d1a6
+  happyTable :: Calc.Parser.HappyAddr
+  {- HasNoCafRefs, Strictness: m, Inline: NOINLINE -}
+411c12412936fce7e30d82c61afd4dd8
+  happyTcHack :: forall a. GHC.Prim.Int# -> a -> a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, True)
+                (\ @ a7 x :: GHC.Prim.Int# y :: a7 -> y) -}
+940881f1a40fbbaedd8b29f64e2aa51f
+  happyThen ::
+    forall a b.
+    Calc.Base.Parser a
+    -> (a -> Calc.Base.Parser b) -> Calc.Base.Parser b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(C1(U))><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Lexer.$fMonadAlex1
+                  `cast`
+                (forall a7 b.
+                 <Calc.Lexer.Alex a7>_R
+                 ->_R <a7 -> Calc.Lexer.Alex b>_R
+                 ->_R Sym (Calc.Lexer.NTCo:Alex[0] <b>_R)) -}
+249675f1e6694f4c34cac637fb8daeb3
+  happyThen1 ::
+    forall a b.
+    Calc.Base.Parser a
+    -> (a -> Calc.Base.Parser b) -> Calc.Base.Parser b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(C1(U))><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Lexer.$fMonadAlex1
+                  `cast`
+                (forall a7 b.
+                 <Calc.Lexer.Alex a7>_R
+                 ->_R <a7 -> Calc.Lexer.Alex b>_R
+                 ->_R Sym (Calc.Lexer.NTCo:Alex[0] <b>_R)) -}
+6b9394db4005404a67973453f14d961d
+  happy_n_nonterms :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 5) -}
+a278d9fa5b0ed13aa3154deddbb7051c
+  happy_n_terms :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 31) -}
+65875c374b9a9cb2e3d5192daa74494f
+  indexShortOffAddr ::
+    Calc.Parser.HappyAddr -> GHC.Prim.Int# -> GHC.Prim.Int#
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U(U)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Calc.Parser.HappyAddr off :: GHC.Prim.Int# ->
+                 case ds of wild { Calc.Parser.HappyA# arr ->
+                 let {
+                   off' :: GHC.Prim.Int# = GHC.Prim.*# off 2
+                 } in
+                 case GHC.Prim.indexCharOffAddr# arr off' of wild1 { DEFAULT ->
+                 case GHC.Prim.indexCharOffAddr#
+                        arr
+                        (GHC.Prim.+# off' 1) of wild2 { DEFAULT ->
+                 GHC.Prim.narrow16Int#
+                   (GHC.Prim.word2Int#
+                      (GHC.Prim.or#
+                         (GHC.Prim.uncheckedShiftL#
+                            (GHC.Prim.int2Word# (GHC.Prim.ord# wild2))
+                            8)
+                         (GHC.Prim.int2Word# (GHC.Prim.ord# wild1)))) } } }) -}
+4c05cb71a4ab388620c45567b47302b1
+  notHappyAtAll :: forall a. a
+  {- Strictness: b -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

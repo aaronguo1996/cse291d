@@ -1,0 +1,1004 @@
+
+==================== FINAL INTERFACE ====================
+2017-11-27 18:37:03.0632299 UTC
+
+interface main@main:Calc.Lexer 7103
+  interface hash: 16783ba37a82d8f2a5eb7d06b47cbc29
+  ABI hash: 7dbed6056303e487ca72fa46faeae277
+  export-list hash: b35ab5ebb4f27b39723a377a17a32d01
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: aadc6f399fc4a059d22cd25e87481bcf
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Calc.Lexer.alexError
+  Calc.Lexer.alexMonadScan
+  Calc.Lexer.runAlex
+  Calc.Lexer.tokenToPosN
+  Calc.Lexer.Alex{Calc.Lexer.Alex Calc.Lexer.unAlex}
+  Calc.Lexer.AlexPosn{Calc.Lexer.AlexPn}
+  Calc.Lexer.AlexState{Calc.Lexer.AlexState Calc.Lexer.alex_bpos Calc.Lexer.alex_chr Calc.Lexer.alex_inp Calc.Lexer.alex_pos Calc.Lexer.alex_scd Calc.Lexer.alex_ust}
+  Calc.Lexer.Token{Calc.Lexer.Token}
+  Calc.Lexer.TokenClass{Calc.Lexer.TokenAssign Calc.Lexer.TokenCB Calc.Lexer.TokenCase Calc.Lexer.TokenCons Calc.Lexer.TokenDiv Calc.Lexer.TokenEOF Calc.Lexer.TokenElse Calc.Lexer.TokenEq Calc.Lexer.TokenFalse Calc.Lexer.TokenGT Calc.Lexer.TokenIf Calc.Lexer.TokenIn Calc.Lexer.TokenInt Calc.Lexer.TokenLT Calc.Lexer.TokenLambda Calc.Lexer.TokenLand Calc.Lexer.TokenLet Calc.Lexer.TokenLor Calc.Lexer.TokenMinus Calc.Lexer.TokenNil Calc.Lexer.TokenNot Calc.Lexer.TokenOB Calc.Lexer.TokenOf Calc.Lexer.TokenPlus Calc.Lexer.TokenRarrow Calc.Lexer.TokenSemi Calc.Lexer.TokenThen Calc.Lexer.TokenTimes Calc.Lexer.TokenTrue Calc.Lexer.TokenVar}
+module dependencies:
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0 bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+import  -/  array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA:Data.Array 6e22602c1cc5e362609f0924a7c0a209
+import  -/  array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA:Data.Array.Base 7736ce724c32fec5ae0fcf43571e8a85
+import  -/  base-4.8.2.0:Control.Applicative a8ebf5ad4932b411ad7725da68be9801
+import  -/  base-4.8.2.0:Control.Monad 480c5067477275068c9b98be08410df9
+import  -/  base-4.8.2.0:Data.Char c8f827952d4111ae2e47c0b105217cdb
+import  -/  base-4.8.2.0:Data.Either e8724afd65fd432cfe9a54014f5f762d
+import  -/  base-4.8.2.0:Data.Int 1419fa899a36eeb2bd16fdb7f0a89738
+import  -/  base-4.8.2.0:Data.Word ec8deb535202352cc8b509b14004bcbd
+import  -/  base-4.8.2.0:GHC.Arr 70f35e6bfbc61995e045edb612354887
+import  -/  base-4.8.2.0:GHC.Base a4939789b2cfd60b36ed163e56a623cd
+import  -/  base-4.8.2.0:GHC.Exts dba55c2c113578dc7ef7f7530324cbc9
+import  -/  base-4.8.2.0:GHC.Int 28d8a9f7cfc272358fb4631d98c579ce
+import  -/  base-4.8.2.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.2.0:GHC.Real 1281efa9baf803bc7859d7efb89a38b3
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
+import  -/  base-4.8.2.0:GHC.Word 10dc88543d98000abab9695a1019767d
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  base-4.8.2.0:System.Exit f5581af4ad998e898da01fdc74c2769b
+import  -/  base-4.8.2.0:Text.Read ef0ef92fb7358ae94bab089940adfd2a
+import  -/  bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Internal fe5d057ff2b226bcbbb8dc734ad2495a
+import  -/  bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Lazy 381d43ef4fab40c90f7ad267b585f3f2
+import  -/  bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Lazy.Char8 caf675882d13961c08b8e4ef396bdc72
+import  -/  bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Lazy.Internal 53fadf747c97476e546e01c57d904b17
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+addDependentFile "C:\Users\sherl\AppData\Local\Programs\stack\x86_64-windows\ghc-7.10.3\lib\include\ghcversion.h"
+addDependentFile "C:\Users\sherl\AppData\Local\Programs\stack\x86_64-windows\ghc-7.10.3\lib\include\ghcconfig.h"
+addDependentFile "C:\Users\sherl\AppData\Local\Programs\stack\x86_64-windows\ghc-7.10.3\lib\include\ghcplatform.h"
+addDependentFile "C:\Users\sherl\AppData\Local\Programs\stack\x86_64-windows\ghc-7.10.3\lib\include\ghcautoconf.h"
+addDependentFile ".stack-work\dist\2672c1f3\build\autogen\cabal_macros.h"
+85928eaca8bc5a50a498e8aded94cd63
+  $fApplicativeAlex :: GHC.Base.Applicative Calc.Lexer.Alex
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Lexer.Alex
+                  Calc.Lexer.$fFunctorAlex
+                  Calc.Lexer.$fApplicativeAlex_$cpure
+                  Calc.Lexer.$fApplicativeAlex_$sap
+                  Calc.Lexer.$fApplicativeAlex_$c*>
+                  Calc.Lexer.$fApplicativeAlex_$c<* -}
+85928eaca8bc5a50a498e8aded94cd63
+  $fApplicativeAlex1 ::
+    Calc.Lexer.Alex a
+    -> Calc.Lexer.Alex b
+    -> Calc.Lexer.AlexState
+    -> Data.Either.Either GHC.Base.String (Calc.Lexer.AlexState, a)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: (\ @ a2
+                   @ b
+                   eta :: Calc.Lexer.Alex a2
+                   eta1 :: Calc.Lexer.Alex b
+                   eta2 :: Calc.Lexer.AlexState ->
+                 Calc.Lexer.$fApplicativeAlex2
+                   @ b
+                   @ a2
+                   (\ s :: Calc.Lexer.AlexState[OneShot] ->
+                    case eta `cast` (Calc.Lexer.NTCo:Alex[0] <a2>_R) s of wild {
+                      Data.Either.Left msg
+                      -> Data.Either.Left
+                           @ GHC.Base.String
+                           @ (Calc.Lexer.AlexState, b -> a2)
+                           msg
+                      Data.Either.Right ds
+                      -> case ds of wild1 { (,) s' a3 ->
+                         Data.Either.Right
+                           @ GHC.Base.String
+                           @ (Calc.Lexer.AlexState, b -> a2)
+                           (s', \ ds1 :: b -> a3) } })
+                     `cast`
+                   (Sym (Calc.Lexer.NTCo:Alex[0] <b -> a2>_R))
+                   eta1
+                   eta2) -}
+85928eaca8bc5a50a498e8aded94cd63
+  $fApplicativeAlex2 ::
+    Calc.Lexer.Alex (a -> b)
+    -> Calc.Lexer.Alex a
+    -> Calc.Lexer.AlexState
+    -> Data.Either.Either GHC.Base.String (Calc.Lexer.AlexState, b)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: (\ @ a2
+                   @ b
+                   m1 :: Calc.Lexer.Alex (a2 -> b)
+                   m2 :: Calc.Lexer.Alex a2
+                   eta :: Calc.Lexer.AlexState ->
+                 case m1 `cast` (Calc.Lexer.NTCo:Alex[0] <a2 -> b>_R) eta of wild {
+                   Data.Either.Left msg
+                   -> Data.Either.Left
+                        @ GHC.Base.String
+                        @ (Calc.Lexer.AlexState, b)
+                        msg
+                   Data.Either.Right ds
+                   -> case ds of wild1 { (,) s' a3 ->
+                      case m2 `cast` (Calc.Lexer.NTCo:Alex[0] <a2>_R) s' of wild2 {
+                        Data.Either.Left msg
+                        -> Data.Either.Left
+                             @ GHC.Base.String
+                             @ (Calc.Lexer.AlexState, b)
+                             msg
+                        Data.Either.Right ds1
+                        -> case ds1 of wild3 { (,) s'1 a4 ->
+                           Data.Either.Right
+                             @ GHC.Base.String
+                             @ (Calc.Lexer.AlexState, b)
+                             (s'1, a3 a4) } } } }) -}
+85928eaca8bc5a50a498e8aded94cd63
+  $fApplicativeAlex3 ::
+    Calc.Lexer.Alex a
+    -> Calc.Lexer.Alex b
+    -> Calc.Lexer.AlexState
+    -> Data.Either.Either GHC.Base.String (Calc.Lexer.AlexState, b)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: (\ @ a2
+                   @ b
+                   eta :: Calc.Lexer.Alex a2
+                   eta1 :: Calc.Lexer.Alex b
+                   eta2 :: Calc.Lexer.AlexState ->
+                 Calc.Lexer.$fApplicativeAlex2
+                   @ b
+                   @ b
+                   (\ eta3 :: Calc.Lexer.AlexState[OneShot] ->
+                    case eta `cast` (Calc.Lexer.NTCo:Alex[0] <a2>_R) eta3 of wild {
+                      Data.Either.Left msg
+                      -> Data.Either.Left
+                           @ GHC.Base.String
+                           @ (Calc.Lexer.AlexState, b -> b)
+                           msg
+                      Data.Either.Right ds
+                      -> case ds of wild1 { (,) s' a3 ->
+                         Data.Either.Right
+                           @ GHC.Base.String
+                           @ (Calc.Lexer.AlexState, b -> b)
+                           (s', GHC.Base.id @ b) } })
+                     `cast`
+                   (Sym (Calc.Lexer.NTCo:Alex[0] <b -> b>_R))
+                   eta1
+                   eta2) -}
+1128cf61e44c0d441dc2934732ae61d5
+  $fApplicativeAlex4 ::
+    a
+    -> Calc.Lexer.AlexState
+    -> Data.Either.Either GHC.Base.String (Calc.Lexer.AlexState, a)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a2 a3 :: a2 s :: Calc.Lexer.AlexState ->
+                 Data.Either.Right
+                   @ GHC.Base.String
+                   @ (Calc.Lexer.AlexState, a2)
+                   (s, a3)) -}
+85928eaca8bc5a50a498e8aded94cd63
+  $fApplicativeAlex_$c*> ::
+    Calc.Lexer.Alex a -> Calc.Lexer.Alex b -> Calc.Lexer.Alex b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Lexer.$fApplicativeAlex3
+                  `cast`
+                (forall a2 b.
+                 <Calc.Lexer.Alex a2>_R
+                 ->_R <Calc.Lexer.Alex b>_R
+                 ->_R Sym (Calc.Lexer.NTCo:Alex[0] <b>_R)) -}
+85928eaca8bc5a50a498e8aded94cd63
+  $fApplicativeAlex_$c<* ::
+    Calc.Lexer.Alex a -> Calc.Lexer.Alex b -> Calc.Lexer.Alex a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Lexer.$fApplicativeAlex1
+                  `cast`
+                (forall a2 b.
+                 <Calc.Lexer.Alex a2>_R
+                 ->_R <Calc.Lexer.Alex b>_R
+                 ->_R Sym (Calc.Lexer.NTCo:Alex[0] <a2>_R)) -}
+85928eaca8bc5a50a498e8aded94cd63
+  $fApplicativeAlex_$cpure :: a -> Calc.Lexer.Alex a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m2,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Lexer.$fApplicativeAlex4
+                  `cast`
+                (forall a2. <a2>_R ->_R Sym (Calc.Lexer.NTCo:Alex[0] <a2>_R)) -}
+85928eaca8bc5a50a498e8aded94cd63
+  $fApplicativeAlex_$sap ::
+    Calc.Lexer.Alex (a -> b) -> Calc.Lexer.Alex a -> Calc.Lexer.Alex b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Lexer.$fApplicativeAlex2
+                  `cast`
+                (forall a2 b.
+                 <Calc.Lexer.Alex (a2 -> b)>_R
+                 ->_R <Calc.Lexer.Alex a2>_R
+                 ->_R Sym (Calc.Lexer.NTCo:Alex[0] <b>_R)) -}
+261e8f7425639282fa8fc3ef60a918ec
+  $fEqAlexPosn :: GHC.Classes.Eq Calc.Lexer.AlexPosn
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Lexer.AlexPosn
+                  Calc.Lexer.$fEqAlexPosn_$c==
+                  Calc.Lexer.$fEqAlexPosn_$c/= -}
+261e8f7425639282fa8fc3ef60a918ec
+  $fEqAlexPosn_$c/= ::
+    Calc.Lexer.AlexPosn -> Calc.Lexer.AlexPosn -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U(U,U,U)><S,1*U(U,U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a2 :: Calc.Lexer.AlexPosn b :: Calc.Lexer.AlexPosn ->
+                 case a2 of wild { Calc.Lexer.AlexPn dt dt1 dt2 ->
+                 case b of wild1 { Calc.Lexer.AlexPn dt3 dt4 dt5 ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# dt dt3) of wild2 {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==# dt1 dt4) of wild3 {
+                        GHC.Types.False -> GHC.Types.True
+                        GHC.Types.True
+                        -> case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# dt2 dt5) of wild4 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True -> GHC.Types.False } } } } }) -}
+261e8f7425639282fa8fc3ef60a918ec
+  $fEqAlexPosn_$c== ::
+    Calc.Lexer.AlexPosn -> Calc.Lexer.AlexPosn -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U(U,U,U)><S,1*U(U,U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Calc.Lexer.AlexPosn ds1 :: Calc.Lexer.AlexPosn ->
+                 case ds of wild { Calc.Lexer.AlexPn dt dt1 dt2 ->
+                 case ds1 of wild1 { Calc.Lexer.AlexPn dt3 dt4 dt5 ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# dt dt3) of wild2 {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==# dt1 dt4) of wild3 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==# dt2 dt5) } } } }) -}
+d54fdde1724412a5e777472730babff5
+  $fEqTokenClass :: GHC.Classes.Eq Calc.Lexer.TokenClass
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Lexer.TokenClass
+                  Calc.Lexer.$fEqTokenClass_$c==
+                  Calc.Lexer.$fEqTokenClass_$c/= -}
+d54fdde1724412a5e777472730babff5
+  $fEqTokenClass_$c/= ::
+    Calc.Lexer.TokenClass -> Calc.Lexer.TokenClass -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a2 :: Calc.Lexer.TokenClass b :: Calc.Lexer.TokenClass ->
+                 case Calc.Lexer.$fEqTokenClass_$c== a2 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+d54fdde1724412a5e777472730babff5
+  $fEqTokenClass_$c== ::
+    Calc.Lexer.TokenClass -> Calc.Lexer.TokenClass -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ ds :: Calc.Lexer.TokenClass
+                   ds1 :: Calc.Lexer.TokenClass ->
+                 case ds of wild {
+                   DEFAULT
+                   -> case ds1 of x1 { DEFAULT ->
+                      GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==#
+                           (GHC.Prim.dataToTag# @ Calc.Lexer.TokenClass wild)
+                           (GHC.Prim.dataToTag# @ Calc.Lexer.TokenClass x1)) }
+                   Calc.Lexer.TokenInt a2
+                   -> case ds1 of wild1 {
+                        DEFAULT
+                        -> case GHC.Prim.dataToTag#
+                                  @ Calc.Lexer.TokenClass
+                                  wild1 of wild2 {
+                             DEFAULT -> GHC.Types.False 7 -> GHC.Types.True }
+                        Calc.Lexer.TokenInt b1 -> GHC.Classes.eqInt a2 b1 }
+                   Calc.Lexer.TokenVar a2
+                   -> case ds1 of wild1 {
+                        DEFAULT
+                        -> case GHC.Prim.dataToTag#
+                                  @ Calc.Lexer.TokenClass
+                                  wild1 of wild2 {
+                             DEFAULT -> GHC.Types.False 8 -> GHC.Types.True }
+                        Calc.Lexer.TokenVar b1 -> GHC.Base.eqString a2 b1 } }) -}
+85928eaca8bc5a50a498e8aded94cd63
+  $fFunctorAlex :: GHC.Base.Functor Calc.Lexer.Alex
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Lexer.Alex
+                  Calc.Lexer.$fFunctorAlex_$cfmap
+                  Calc.Lexer.$fFunctorAlex_$c<$ -}
+85928eaca8bc5a50a498e8aded94cd63
+  $fFunctorAlex1 ::
+    a
+    -> Calc.Lexer.Alex b
+    -> Calc.Lexer.AlexState
+    -> Data.Either.Either GHC.Base.String (Calc.Lexer.AlexState, a)
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a2
+                   @ b
+                   eta :: a2
+                   eta1 :: Calc.Lexer.Alex b
+                   eta2 :: Calc.Lexer.AlexState ->
+                 case eta1 `cast` (Calc.Lexer.NTCo:Alex[0] <b>_R) eta2 of wild {
+                   Data.Either.Left msg
+                   -> Data.Either.Left
+                        @ GHC.Base.String
+                        @ (Calc.Lexer.AlexState, a2)
+                        msg
+                   Data.Either.Right ds
+                   -> case ds of wild1 { (,) s' a3 ->
+                      Data.Either.Right
+                        @ GHC.Base.String
+                        @ (Calc.Lexer.AlexState, a2)
+                        (s', eta) } }) -}
+85928eaca8bc5a50a498e8aded94cd63
+  $fFunctorAlex2 ::
+    (a -> b)
+    -> Calc.Lexer.Alex a
+    -> Calc.Lexer.AlexState
+    -> Data.Either.Either GHC.Base.String (Calc.Lexer.AlexState, b)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*C1(U)><C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a2
+                   @ b
+                   f :: a2 -> b
+                   m :: Calc.Lexer.Alex a2
+                   s :: Calc.Lexer.AlexState ->
+                 case m `cast` (Calc.Lexer.NTCo:Alex[0] <a2>_R) s of wild {
+                   Data.Either.Left msg
+                   -> Data.Either.Left
+                        @ GHC.Base.String
+                        @ (Calc.Lexer.AlexState, b)
+                        msg
+                   Data.Either.Right ds
+                   -> case ds of wild1 { (,) s' a3 ->
+                      Data.Either.Right
+                        @ GHC.Base.String
+                        @ (Calc.Lexer.AlexState, b)
+                        (s', f a3) } }) -}
+4bcec5e894b89f6a2d421a74ac0a739e
+  $fFunctorAlexLastAcc :: GHC.Base.Functor Calc.Lexer.AlexLastAcc
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Lexer.AlexLastAcc
+                  Calc.Lexer.$fFunctorAlexLastAcc_$cfmap
+                  Calc.Lexer.$fFunctorAlexLastAcc_$c<$ -}
+4bcec5e894b89f6a2d421a74ac0a739e
+  $fFunctorAlexLastAcc_$c<$ ::
+    a -> Calc.Lexer.AlexLastAcc b -> Calc.Lexer.AlexLastAcc a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a2 @ b eta :: a2 ds :: Calc.Lexer.AlexLastAcc b ->
+                 case ds of wild {
+                   Calc.Lexer.AlexNone -> Calc.Lexer.AlexNone @ a2
+                   Calc.Lexer.AlexLastAcc x dt dt1 dt2 dt3 dt4
+                   -> Calc.Lexer.AlexLastAcc @ a2 eta dt dt1 dt2 dt3 dt4
+                   Calc.Lexer.AlexLastSkip dt dt1 dt2 dt3 dt4
+                   -> Calc.Lexer.AlexLastSkip @ a2 dt dt1 dt2 dt3 dt4 }) -}
+4bcec5e894b89f6a2d421a74ac0a739e
+  $fFunctorAlexLastAcc_$cfmap ::
+    (a -> b) -> Calc.Lexer.AlexLastAcc a -> Calc.Lexer.AlexLastAcc b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*C1(U)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a2 @ b ds :: a2 -> b ds1 :: Calc.Lexer.AlexLastAcc a2 ->
+                 case ds1 of wild {
+                   Calc.Lexer.AlexNone -> Calc.Lexer.AlexNone @ b
+                   Calc.Lexer.AlexLastAcc x dt dt1 dt2 dt3 dt4
+                   -> Calc.Lexer.AlexLastAcc @ b (ds x) dt dt1 dt2 dt3 dt4
+                   Calc.Lexer.AlexLastSkip dt dt1 dt2 dt3 dt4
+                   -> Calc.Lexer.AlexLastSkip @ b dt dt1 dt2 dt3 dt4 }) -}
+85928eaca8bc5a50a498e8aded94cd63
+  $fFunctorAlex_$c<$ :: a -> Calc.Lexer.Alex b -> Calc.Lexer.Alex a
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Lexer.$fFunctorAlex1
+                  `cast`
+                (forall a2 b.
+                 <a2>_R
+                 ->_R <Calc.Lexer.Alex b>_R
+                 ->_R Sym (Calc.Lexer.NTCo:Alex[0] <a2>_R)) -}
+85928eaca8bc5a50a498e8aded94cd63
+  $fFunctorAlex_$cfmap ::
+    (a -> b) -> Calc.Lexer.Alex a -> Calc.Lexer.Alex b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*C1(U)><C(S),1*C1(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Lexer.$fFunctorAlex2
+                  `cast`
+                (forall a2 b.
+                 <a2 -> b>_R
+                 ->_R <Calc.Lexer.Alex a2>_R
+                 ->_R Sym (Calc.Lexer.NTCo:Alex[0] <b>_R)) -}
+85928eaca8bc5a50a498e8aded94cd63
+  $fMonadAlex :: GHC.Base.Monad Calc.Lexer.Alex
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Lexer.Alex
+                  Calc.Lexer.$fApplicativeAlex
+                  Calc.Lexer.$fMonadAlex_$c>>=
+                  Calc.Lexer.$fMonadAlex_$c>>
+                  Calc.Lexer.$fApplicativeAlex_$cpure
+                  Calc.Lexer.$fMonadAlex_$s$dmfail -}
+85928eaca8bc5a50a498e8aded94cd63
+  $fMonadAlex1 ::
+    Calc.Lexer.Alex a
+    -> (a -> Calc.Lexer.Alex b)
+    -> Calc.Lexer.AlexState
+    -> Data.Either.Either GHC.Base.String (Calc.Lexer.AlexState, b)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(C1(U))><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a2
+                   @ b
+                   m :: Calc.Lexer.Alex a2
+                   k :: a2 -> Calc.Lexer.Alex b
+                   s :: Calc.Lexer.AlexState ->
+                 case m `cast` (Calc.Lexer.NTCo:Alex[0] <a2>_R) s of wild {
+                   Data.Either.Left msg
+                   -> Data.Either.Left
+                        @ GHC.Base.String
+                        @ (Calc.Lexer.AlexState, b)
+                        msg
+                   Data.Either.Right ds
+                   -> case ds of wild1 { (,) s' a3 ->
+                      (k a3) `cast` (Calc.Lexer.NTCo:Alex[0] <b>_R) s' } }) -}
+85928eaca8bc5a50a498e8aded94cd63
+  $fMonadAlex_$c>> ::
+    Calc.Lexer.Alex a -> Calc.Lexer.Alex b -> Calc.Lexer.Alex b
+  {- Arity: 2, Strictness: <L,U><L,U>, Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ a2
+                   @ b
+                   m1 :: Calc.Lexer.Alex a2
+                   k :: Calc.Lexer.Alex b
+                   eta :: Calc.Lexer.AlexState ->
+                 (Calc.Lexer.$fMonadAlex_$c>>= @ a2 @ b m1 (\ ds :: a2 -> k))
+                   `cast`
+                 (Calc.Lexer.NTCo:Alex[0] <b>_R)
+                   eta)
+                  `cast`
+                (forall a2 b.
+                 <Calc.Lexer.Alex a2>_R
+                 ->_R <Calc.Lexer.Alex b>_R
+                 ->_R Sym (Calc.Lexer.NTCo:Alex[0] <b>_R)) -}
+85928eaca8bc5a50a498e8aded94cd63
+  $fMonadAlex_$c>>= ::
+    Calc.Lexer.Alex a -> (a -> Calc.Lexer.Alex b) -> Calc.Lexer.Alex b
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <C(S),1*C1(U)><L,1*C1(C1(U))><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Lexer.$fMonadAlex1
+                  `cast`
+                (forall a2 b.
+                 <Calc.Lexer.Alex a2>_R
+                 ->_R <a2 -> Calc.Lexer.Alex b>_R
+                 ->_R Sym (Calc.Lexer.NTCo:Alex[0] <b>_R)) -}
+85928eaca8bc5a50a498e8aded94cd63
+  $fMonadAlex_$s$dmfail :: GHC.Base.String -> Calc.Lexer.Alex a
+  {- Arity: 1, Strictness: <B,U>b,
+     Unfolding: InlineRule (-1, True, True)
+                (\ @ a2 eta :: [GHC.Types.Char] ->
+                 GHC.Err.error @ (Calc.Lexer.Alex a2) eta) -}
+261e8f7425639282fa8fc3ef60a918ec
+  $fShowAlexPosn :: GHC.Show.Show Calc.Lexer.AlexPosn
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Lexer.AlexPosn
+                  Calc.Lexer.$fShowAlexPosn_$cshowsPrec
+                  Calc.Lexer.$fShowAlexPosn_$cshow
+                  Calc.Lexer.$fShowAlexPosn_$cshowList -}
+261e8f7425639282fa8fc3ef60a918ec
+  $fShowAlexPosn1 :: Calc.Lexer.AlexPosn -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ w :: Calc.Lexer.AlexPosn w1 :: GHC.Base.String ->
+                 case w of ww { Calc.Lexer.AlexPn ww1 ww2 ww3 ->
+                 Calc.Lexer.$w$cshowsPrec 0 ww1 ww2 ww3 w1 }) -}
+8e60a440c4a26cf84f3b96f9b07767c6
+  $fShowAlexPosn2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "AlexPn "#) -}
+261e8f7425639282fa8fc3ef60a918ec
+  $fShowAlexPosn_$cshow :: Calc.Lexer.AlexPosn -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(U,U,U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Calc.Lexer.AlexPosn ->
+                 Calc.Lexer.$fShowAlexPosn_$cshowsPrec
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+261e8f7425639282fa8fc3ef60a918ec
+  $fShowAlexPosn_$cshowList ::
+    [Calc.Lexer.AlexPosn] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Calc.Lexer.AlexPosn
+                   Calc.Lexer.$fShowAlexPosn1) -}
+261e8f7425639282fa8fc3ef60a918ec
+  $fShowAlexPosn_$cshowsPrec ::
+    GHC.Types.Int -> Calc.Lexer.AlexPosn -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S,1*U(U)><S,1*U(U,U,U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ w :: GHC.Types.Int
+                   w1 :: Calc.Lexer.AlexPosn
+                   w2 :: GHC.Base.String ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Calc.Lexer.AlexPn ww3 ww4 ww5 ->
+                 Calc.Lexer.$w$cshowsPrec ww1 ww3 ww4 ww5 w2 } }) -}
+0f0b166dc6e151fdb621803ea219d929
+  $fShowToken :: GHC.Show.Show Calc.Lexer.Token
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Lexer.Token
+                  Calc.Lexer.$fShowToken_$cshowsPrec1
+                  Calc.Lexer.$fShowToken_$cshow
+                  Calc.Lexer.$fShowToken_$cshowList -}
+0f0b166dc6e151fdb621803ea219d929
+  $fShowToken1 :: Calc.Lexer.Token -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ w :: Calc.Lexer.Token w1 :: GHC.Base.String ->
+                 case w of ww { Calc.Lexer.Token ww1 ww2 ->
+                 Calc.Lexer.$w$cshowsPrec1 0 ww1 ww2 w1 }) -}
+89dfd495e6930ceac757b76483cf3f5b
+  $fShowToken2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Token "#) -}
+d6d6e3fb865d92907eb457fa94d21983
+  $fShowToken3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11) -}
+d54fdde1724412a5e777472730babff5
+  $fShowTokenClass :: GHC.Show.Show Calc.Lexer.TokenClass
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Lexer.TokenClass
+                  Calc.Lexer.$fShowToken_$cshowsPrec
+                  Calc.Lexer.$fShowTokenClass_$cshow
+                  Calc.Lexer.$fShowTokenClass_$cshowList -}
+d54fdde1724412a5e777472730babff5
+  $fShowTokenClass1 :: Calc.Lexer.TokenClass -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (Calc.Lexer.$fShowToken_$cshowsPrec
+                   Calc.Lexer.$fShowTokenClass2) -}
+fc0627a799af5ab511daf6121f80467c
+  $fShowTokenClass2 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 0) -}
+d54fdde1724412a5e777472730babff5
+  $fShowTokenClass_$cshow :: Calc.Lexer.TokenClass -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Calc.Lexer.TokenClass ->
+                 Calc.Lexer.$fShowToken_$cshowsPrec
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+d54fdde1724412a5e777472730babff5
+  $fShowTokenClass_$cshowList ::
+    [Calc.Lexer.TokenClass] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Calc.Lexer.TokenClass
+                   Calc.Lexer.$fShowTokenClass1) -}
+0f0b166dc6e151fdb621803ea219d929
+  $fShowToken_$cshow :: Calc.Lexer.Token -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U(U,U,U),1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Calc.Lexer.Token ->
+                 Calc.Lexer.$fShowToken_$cshowsPrec1
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+0f0b166dc6e151fdb621803ea219d929
+  $fShowToken_$cshowList :: [Calc.Lexer.Token] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Calc.Lexer.Token
+                   Calc.Lexer.$fShowToken1) -}
+d54fdde1724412a5e777472730babff5
+  $fShowToken_$cshowsPrec ::
+    GHC.Types.Int -> Calc.Lexer.TokenClass -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,1*U(U)><S,1*U><L,U> -}
+0f0b166dc6e151fdb621803ea219d929
+  $fShowToken_$cshowsPrec1 ::
+    GHC.Types.Int -> Calc.Lexer.Token -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S,1*U(U)><S,1*U(1*U(U,U,U),1*U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ w :: GHC.Types.Int
+                   w1 :: Calc.Lexer.Token
+                   w2 :: GHC.Base.String ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Calc.Lexer.Token ww3 ww4 ->
+                 Calc.Lexer.$w$cshowsPrec1 ww1 ww3 ww4 w2 } }) -}
+561917b1ddc7087752db2e3b426caad6
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 5, Strictness: <L,U><L,U><L,U><L,U><L,U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int#
+                   ww1 :: GHC.Prim.Int#
+                   ww2 :: GHC.Prim.Int#
+                   ww3 :: GHC.Prim.Int#
+                   w :: GHC.Base.String ->
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
+                   = \ x :: GHC.Base.String[OneShot] ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       Calc.Lexer.$fShowAlexPosn2
+                       (case GHC.Show.$wshowSignedInt
+                               11
+                               ww1
+                               (GHC.Types.:
+                                  @ GHC.Types.Char
+                                  GHC.Show.showSpace1
+                                  (case GHC.Show.$wshowSignedInt
+                                          11
+                                          ww2
+                                          (GHC.Types.:
+                                             @ GHC.Types.Char
+                                             GHC.Show.showSpace1
+                                             (case GHC.Show.$wshowSignedInt
+                                                     11
+                                                     ww3
+                                                     x of ww4 { (#,#) ww5 ww6 ->
+                                              GHC.Types.:
+                                                @ GHC.Types.Char
+                                                ww5
+                                                ww6 })) of ww4 { (#,#) ww5 ww6 ->
+                                   GHC.Types.:
+                                     @ GHC.Types.Char
+                                     ww5
+                                     ww6 })) of ww4 { (#,#) ww5 ww6 ->
+                        GHC.Types.: @ GHC.Types.Char ww5 ww6 })
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11) of wild {
+                   GHC.Types.False -> p w
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 w)) }) -}
+f941531a062322413b731ea4cf169bd9
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int#
+    -> Calc.Lexer.AlexPosn
+    -> Calc.Lexer.TokenClass
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4, Strictness: <L,U><L,1*U(U,U,U)><L,1*U><L,U>,
+     Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int#
+                   ww1 :: Calc.Lexer.AlexPosn
+                   ww2 :: Calc.Lexer.TokenClass
+                   w :: GHC.Base.String ->
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ x :: GHC.Base.String[OneShot] ->
+                     case ww1 of ww3 { Calc.Lexer.AlexPn ww4 ww5 ww6 ->
+                     Calc.Lexer.$w$cshowsPrec
+                       11
+                       ww4
+                       ww5
+                       ww6
+                       (GHC.Types.:
+                          @ GHC.Types.Char
+                          GHC.Show.showSpace1
+                          (Calc.Lexer.$fShowToken_$cshowsPrec
+                             Calc.Lexer.$fShowToken3
+                             ww2
+                             x)) }
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11) of wild {
+                   GHC.Types.False
+                   -> GHC.Base.++ @ GHC.Types.Char Calc.Lexer.$fShowToken2 (g w)
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Calc.Lexer.$fShowToken2
+                           (g (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 w))) }) -}
+2a2ba29b31dd5238ea8fe8aedb24a22b
+  $wa ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.ByteString.Lazy.Internal.ByteString
+    -> GHC.Prim.Char#
+    -> GHC.Prim.Int#
+    -> Calc.Lexer.AlexUserState
+    -> Data.Either.Either
+         GHC.Base.String (Calc.Lexer.AlexState, Calc.Lexer.Token)
+  {- Arity: 8, Strictness: <L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U>,
+     Inline: [0] -}
+85928eaca8bc5a50a498e8aded94cd63
+  newtype Alex a
+    = Alex {unAlex :: Calc.Lexer.AlexState
+                      -> Data.Either.Either GHC.Base.String (Calc.Lexer.AlexState, a)}
+e6ba06bb49c3dcb41513f6ab7520b33d
+  type role AlexAcc representational phantom
+  data AlexAcc a user = AlexAccNone | AlexAcc a | AlexAccSkip
+    Promotable
+2c4ed2266bb7d952576990e0c74997f4
+  type AlexAction result =
+    Calc.Lexer.AlexInput -> GHC.Int.Int64 -> Calc.Lexer.Alex result
+97064d6670e2358afa7730d81401c382
+  data AlexAddr = AlexA# GHC.Prim.Addr#
+ece24dcf9fd1a636ccacc02363588b88
+  type AlexInput =
+    (Calc.Lexer.AlexPosn,
+     GHC.Types.Char,
+     Data.ByteString.Lazy.Internal.ByteString,
+     GHC.Int.Int64)
+4bcec5e894b89f6a2d421a74ac0a739e
+  data AlexLastAcc a
+    = AlexNone
+    | AlexLastAcc a
+                  {-# UNPACK #-}Calc.Lexer.AlexInput
+                  {-# UNPACK #-}GHC.Types.Int
+    | AlexLastSkip {-# UNPACK #-}Calc.Lexer.AlexInput
+                   {-# UNPACK #-}GHC.Types.Int
+261e8f7425639282fa8fc3ef60a918ec
+  data AlexPosn
+    = AlexPn {-# UNPACK #-}GHC.Types.Int
+             {-# UNPACK #-}GHC.Types.Int
+             {-# UNPACK #-}GHC.Types.Int
+84270506619cafebace64114caa4617e
+  data AlexReturn a
+    = AlexEOF
+    | AlexError {-# UNPACK #-}Calc.Lexer.AlexInput
+    | AlexSkip {-# UNPACK #-}Calc.Lexer.AlexInput
+               {-# UNPACK #-}GHC.Types.Int
+    | AlexToken {-# UNPACK #-}Calc.Lexer.AlexInput
+                {-# UNPACK #-}GHC.Types.Int
+                a
+958855d46b169f6268de29b399fc0d0f
+  data AlexState
+    = AlexState {alex_pos :: {-# UNPACK #-}Calc.Lexer.AlexPosn,
+                 alex_bpos :: {-# UNPACK #-}GHC.Int.Int64,
+                 alex_inp :: Data.ByteString.Lazy.Internal.ByteString,
+                 alex_chr :: {-# UNPACK #-}GHC.Types.Char,
+                 alex_scd :: {-# UNPACK #-}GHC.Types.Int,
+                 alex_ust :: Calc.Lexer.AlexUserState}
+388524ebca414935d3a021067ed24068
+  type AlexUserState = ()
+23d9fe38c80d5a24f3ad21510ef80ab6
+  type Byte = GHC.Word.Word8
+0f0b166dc6e151fdb621803ea219d929
+  data Token = Token Calc.Lexer.AlexPosn Calc.Lexer.TokenClass
+d54fdde1724412a5e777472730babff5
+  data TokenClass
+    = TokenLet
+    | TokenIn
+    | TokenIf
+    | TokenThen
+    | TokenElse
+    | TokenCase
+    | TokenOf
+    | TokenInt GHC.Types.Int
+    | TokenVar GHC.Base.String
+    | TokenPlus
+    | TokenMinus
+    | TokenTimes
+    | TokenDiv
+    | TokenLambda
+    | TokenRarrow
+    | TokenTrue
+    | TokenFalse
+    | TokenNot
+    | TokenLand
+    | TokenLor
+    | TokenGT
+    | TokenLT
+    | TokenEq
+    | TokenAssign
+    | TokenOB
+    | TokenCB
+    | TokenCons
+    | TokenSemi
+    | TokenNil
+    | TokenEOF
+9be378895fe0d59be0e8e7b6669f605c
+  alexError :: GHC.Base.String -> Calc.Lexer.Alex a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,A>m1,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Lexer.alexError1
+                  `cast`
+                (forall a2.
+                 <GHC.Base.String>_R ->_R Sym (Calc.Lexer.NTCo:Alex[0] <a2>_R)) -}
+cc90b8f235b3dfe565874963dd378957
+  alexError1 ::
+    GHC.Base.String
+    -> Calc.Lexer.AlexState
+    -> Data.Either.Either GHC.Base.String (Calc.Lexer.AlexState, a)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,A>m1,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a2 message :: GHC.Base.String eta :: Calc.Lexer.AlexState ->
+                 Data.Either.Left
+                   @ GHC.Base.String
+                   @ (Calc.Lexer.AlexState, a2)
+                   message) -}
+95a0478f2c23e568b6d147288ce9f926
+  alexMonadScan :: Calc.Lexer.Alex Calc.Lexer.Token
+  {- Arity: 1, Strictness: <S,1*U(U,U,U,U,U,U,U,U)>,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Lexer.alexMonadScan1
+                  `cast`
+                (Sym (Calc.Lexer.NTCo:Alex[0] <Calc.Lexer.Token>_R)) -}
+afa36962af7094eab3384737e800b26a
+  alexMonadScan1 ::
+    Calc.Lexer.AlexState
+    -> Data.Either.Either
+         GHC.Base.String (Calc.Lexer.AlexState, Calc.Lexer.Token)
+  {- Arity: 1, Strictness: <S,1*U(U,U,U,U,U,U,U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Calc.Lexer.AlexState ->
+                 case w of ww { Calc.Lexer.AlexState ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ->
+                 Calc.Lexer.$wa ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 }) -}
+fdac846f2697ef595e7c8484f033ffea
+  alex_bpos :: Calc.Lexer.AlexState -> GHC.Int.Int64
+  RecSel Calc.Lexer.AlexState
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(A,A,A,U,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Calc.Lexer.AlexState ->
+                 case ds of wild { Calc.Lexer.AlexState dt dt1 dt2 dt3 ds1 dt4 dt5 ds2 ->
+                 GHC.Int.I64# dt3 }) -}
+973bcb3892ed80b4ce883c324503b599
+  alex_chr :: Calc.Lexer.AlexState -> GHC.Types.Char
+  RecSel Calc.Lexer.AlexState
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(A,A,A,A,A,U,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Calc.Lexer.AlexState ->
+                 case ds of wild { Calc.Lexer.AlexState dt dt1 dt2 dt3 ds1 dt4 dt5 ds2 ->
+                 GHC.Types.C# dt4 }) -}
+dfce1dc1cc8cec5af540fd6777f36665
+  alex_inp ::
+    Calc.Lexer.AlexState -> Data.ByteString.Lazy.Internal.ByteString
+  RecSel Calc.Lexer.AlexState
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLSLLL),1*U(A,A,A,A,1*U,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Calc.Lexer.AlexState ->
+                 case ds of wild { Calc.Lexer.AlexState dt dt1 dt2 dt3 ds1 dt4 dt5 ds2 ->
+                 ds1 }) -}
+5663ddc387ceb2f806dc5083ec2f9a3c
+  alex_pos :: Calc.Lexer.AlexState -> Calc.Lexer.AlexPosn
+  RecSel Calc.Lexer.AlexState
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U,A,A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Calc.Lexer.AlexState ->
+                 case ds of wild { Calc.Lexer.AlexState dt dt1 dt2 dt3 ds1 dt4 dt5 ds2 ->
+                 Calc.Lexer.AlexPn dt dt1 dt2 }) -}
+630450a5dc8be4c24b0da1c53243a6bc
+  alex_scd :: Calc.Lexer.AlexState -> GHC.Types.Int
+  RecSel Calc.Lexer.AlexState
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(A,A,A,A,A,A,U,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Calc.Lexer.AlexState ->
+                 case ds of wild { Calc.Lexer.AlexState dt dt1 dt2 dt3 ds1 dt4 dt5 ds2 ->
+                 GHC.Types.I# dt5 }) -}
+af158bf44658a8c7230fc5ff493bdb37
+  alex_ust :: Calc.Lexer.AlexState -> Calc.Lexer.AlexUserState
+  RecSel Calc.Lexer.AlexState
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLS),1*U(A,A,A,A,A,A,A,1*U())>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Calc.Lexer.AlexState ->
+                 case ds of wild { Calc.Lexer.AlexState dt dt1 dt2 dt3 ds1 dt4 dt5 ds2 ->
+                 ds2 }) -}
+f2397297a02b7292b1a8c09bd40a5fe6
+  runAlex ::
+    Data.ByteString.Lazy.Internal.ByteString
+    -> Calc.Lexer.Alex a -> Data.Either.Either GHC.Base.String a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><C(S),1*C1(U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a2
+                   input :: Data.ByteString.Lazy.Internal.ByteString
+                   ds :: Calc.Lexer.Alex a2 ->
+                 case ds `cast` (Calc.Lexer.NTCo:Alex[0] <a2>_R)
+                        (Calc.Lexer.AlexState 0 1 1 0 input '\n' 0 GHC.Tuple.()) of wild {
+                   Data.Either.Left msg -> Data.Either.Left @ GHC.Base.String @ a2 msg
+                   Data.Either.Right ds1
+                   -> case ds1 of wild1 { (,) ds2 a3 ->
+                      Data.Either.Right @ GHC.Base.String @ a2 a3 } }) -}
+096db349407ccef27cb0025ad00847e2
+  tokenToPosN :: Calc.Lexer.Token -> Calc.Lexer.AlexPosn
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U(U,U,U),A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Calc.Lexer.Token ->
+                 case ds of wild { Calc.Lexer.Token p ds1 -> p }) -}
+9d4a704ad03487760af02af4911b6203
+  unAlex ::
+    Calc.Lexer.Alex a
+    -> Calc.Lexer.AlexState
+    -> Data.Either.Either GHC.Base.String (Calc.Lexer.AlexState, a)
+  RecSel Calc.Lexer.Alex
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Calc.Lexer.unAlex1
+                  `cast`
+                (forall a2.
+                 <Calc.Lexer.Alex a2>_R ->_R Calc.Lexer.NTCo:Alex[0] <a2>_R) -}
+6c49d5e0743eacdcea3d1013fa1504bd
+  unAlex1 :: Calc.Lexer.Alex a -> Calc.Lexer.Alex a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a2 ds :: Calc.Lexer.Alex a2 -> ds) -}
+instance GHC.Base.Applicative [Calc.Lexer.Alex]
+  = Calc.Lexer.$fApplicativeAlex
+instance GHC.Classes.Eq [Calc.Lexer.AlexPosn]
+  = Calc.Lexer.$fEqAlexPosn
+instance GHC.Classes.Eq [Calc.Lexer.TokenClass]
+  = Calc.Lexer.$fEqTokenClass
+instance GHC.Base.Functor [Calc.Lexer.Alex]
+  = Calc.Lexer.$fFunctorAlex
+instance GHC.Base.Functor [Calc.Lexer.AlexLastAcc]
+  = Calc.Lexer.$fFunctorAlexLastAcc
+instance GHC.Base.Monad [Calc.Lexer.Alex] = Calc.Lexer.$fMonadAlex
+instance GHC.Show.Show [Calc.Lexer.AlexPosn]
+  = Calc.Lexer.$fShowAlexPosn
+instance GHC.Show.Show [Calc.Lexer.Token] = Calc.Lexer.$fShowToken
+instance GHC.Show.Show [Calc.Lexer.TokenClass]
+  = Calc.Lexer.$fShowTokenClass
+"SPEC/Calc.Lexer $dmfail @ Alex" [ALWAYS] forall $dMonad :: GHC.Base.Monad
+                                                              Calc.Lexer.Alex
+  GHC.Base.$dmfail @ Calc.Lexer.Alex $dMonad
+  = Calc.Lexer.$fMonadAlex_$s$dmfail
+"SPEC/Calc.Lexer ap @ Alex _ _" [ALWAYS] forall @ a2
+                                                @ b
+                                                $dMonad :: GHC.Base.Monad Calc.Lexer.Alex
+  GHC.Base.ap @ Calc.Lexer.Alex @ a2 @ b $dMonad
+  = Calc.Lexer.$fApplicativeAlex_$sap @ a2 @ b
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

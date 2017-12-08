@@ -42,6 +42,7 @@ import Calc.Data
         ')'             { Token _ TokenCB       }
         "[]"            { Token _ TokenNil      }
 
+%left APP
 %right in
 %nonassoc lor
 %nonassoc land
@@ -60,6 +61,7 @@ Exp :: {Exp}
      | if Exp then Exp else Exp                 { ITE $2 $4 $6 }
      | case Var of CaseNil ';' CaseCons         { Case $2 $4 $6 }
      | '\\' Var "->" Exp                        { Lambda $2 $4 }
+     | Exp Exp %prec APP                        { App $1 $2 }
      | Exp land Exp                             { And $1 $3 }
      | Exp lor Exp                              { Or $1 $3 }
      | Exp '>' Exp                              { OpGT $1 $3 }

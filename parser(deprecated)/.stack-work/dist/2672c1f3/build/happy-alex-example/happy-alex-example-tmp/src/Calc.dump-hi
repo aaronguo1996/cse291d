@@ -1,0 +1,95 @@
+
+==================== FINAL INTERFACE ====================
+2017-11-27 19:26:31.8128286 UTC
+
+interface main@main:Calc 7103
+  interface hash: 83d5698d784ef3607aa48f56f6a2a51a
+  ABI hash: 7e1a3fb89394a45d672b18c955d940eb
+  export-list hash: 08930b73071b709c5f12b2e98f56f998
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: c3efb0b1ae3cc88596805bf4b756c449
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Calc.lf2sf
+  Calc.Wrapper.parse
+  Calc.Data.CaseCons{Calc.Data.CaseCons}
+  Calc.Data.CaseNil{Calc.Data.CaseNil}
+  Calc.Data.Exp{Calc.Data.Add Calc.Data.And Calc.Data.App Calc.Data.Brack Calc.Data.Case Calc.Data.Cons Calc.Data.Div Calc.Data.ExpFalse Calc.Data.ExpTrue Calc.Data.ExpVar Calc.Data.ITE Calc.Data.Int Calc.Data.Lambda Calc.Data.Let Calc.Data.Mul Calc.Data.Nil Calc.Data.Not Calc.Data.OpEq Calc.Data.OpGT Calc.Data.OpLT Calc.Data.Or Calc.Data.Sub}
+  Calc.Data.Program{Calc.Data.DefEq}
+  Calc.Data.Var{Calc.Data.Var}
+  Calc.Wrapper.ErrClass{Calc.Wrapper.Lexical Calc.Wrapper.Message Calc.Wrapper.Syntactical}
+  Calc.Wrapper.Error{Calc.Wrapper.Error Calc.Wrapper.errClass Calc.Wrapper.errLine Calc.Wrapper.errPos}
+module dependencies: Calc.Base Calc.Data Calc.Lexer Calc.Parser
+                     Calc.Wrapper
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0 bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:GHC.Base a4939789b2cfd60b36ed163e56a623cd
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  Calc.Data 458e01b909d0a414ea04764919946bdb
+  exports: ddca78a100a14ff199d3e263e042f6e3
+  Add fe01d18b8f676f65f1695fd1d7cc25c1
+  And 89f3ccb23f8856a7d847ff8f77aab3df
+  App 32bbf9fd8b975d8f0ca85d25a467558f
+  Brack e85c3ae02bd4c5fb017e10a7aabf3de8
+  Case 35ef02df1213ae235aefc26447d89d7e
+  CaseCons 934a6e6b46ef5483ba4d0270799ed230
+  CaseCons 1f8ece0c7696867a0e71e3cc6af50afc
+  CaseNil 2464f87b2dc7562547a877baa5813a0c
+  CaseNil 1f8ece0c7696867a0e71e3cc6af50afc
+  Cons 73e33c4fa65cab53ac4cb5f6d4aee5b3
+  DefEq 3217a5d9a14c1461038377a9caa4b9f8
+  Div f06372d4a151541a841f0022aedba575
+  Exp 1f8ece0c7696867a0e71e3cc6af50afc
+  ExpFalse ad4c920cbde8c5cb3162241a3a028ed3
+  ExpTrue ed447a7150ca2355e3d289b292d707f1
+  ExpVar ef310684a59c36e953c65e4462354f64
+  ITE abeafc6d79dd0282cc064d3df36bdf54
+  Int 0ca37ae540c530f3f6a1e85be4c951af
+  Lambda 3d155a783f3b88b13658dfca3d0f0671
+  Let df4555166eedadd2f75536c8de37721b
+  Mul 58ec3658b00f8c64e484aa3b94e03c71
+  Nil ba8dc4ce5ad80e8eed7d2e3980698832
+  Not eb3e43d2debda7a6e79fa4ab6d23fe81
+  OpEq 1ac3f2dd1385c92b725328b965c5966b
+  OpGT 735b9a0bbce11e9b24ab49164ab273f0
+  OpLT 44d07d1f0179acb6ba123ea7905ce8e2
+  Or ea3e7f275bde8509a5d5f102950a5c73
+  Program d2e6774a8ef84482f52352224efc1af2
+  Sub 6061deb5a6c01ee8e0ebdc2cff07e95b
+  Var 78d22b811b551364c0f86bcdf131d929
+  Var 811863b2c7d034975bef0df517b79898
+import  -/  Calc.Wrapper c090e34326180b8c4e94081687b586ee
+  exports: d5a9d14122e9900a4a16f9c855d728e3
+  ErrClass b4f40223936c2ae38485f3d053f1efe0
+  Error c3b961629f8bb667258c3598558be383
+  Error a7a1df3089d3251a122ec9a0b87a6326
+  Lexical 9f4310f63a2ea022d78472346bbda5c1
+  Message 61ecf03f248a574c647e838ff8910705
+  Syntactical 73776900b737aa810a1523584fb5b46b
+  errClass 9e2a486ea1247405e11855ce24a822be
+  errLine 4c035e46433c4741dd213ae3ebbc8656
+  errPos 7a04131df6a9155d52ba2d93c3c93c3e
+  parse 97b036f345ed6cdc8a41d7ddb0ab8068
+9ccfc9b303f48070fcc8519d84fc3990
+  lf2sf :: Calc.Data.Program -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ a :: Calc.Data.Program -> GHC.Types.[] @ GHC.Types.Char) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

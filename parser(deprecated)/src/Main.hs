@@ -7,6 +7,7 @@ import           Calc
 import           Prelude hiding (getContents)
 import           Data.ByteString.Lazy (getContents)
 import           Data.ByteString.Lazy.Char8 (pack)
+import           System.Exit
 ----------------------------------------------------------------------------
 
 main :: IO ()
@@ -29,4 +30,6 @@ main = do
     line <- getLine
     let result = parse (pack line)
     putStrLn (show result)
-    main
+    if line=="q"
+        then exitWith ExitSuccess
+        else main

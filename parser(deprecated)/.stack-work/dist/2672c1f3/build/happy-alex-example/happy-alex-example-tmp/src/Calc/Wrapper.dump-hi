@@ -1,0 +1,563 @@
+
+==================== FINAL INTERFACE ====================
+2017-11-27 19:26:31.6925438 UTC
+
+interface main@main:Calc.Wrapper 7103
+  interface hash: 2e450cc50a233adb6d15e39b167b9576
+  ABI hash: c090e34326180b8c4e94081687b586ee
+  export-list hash: d5a9d14122e9900a4a16f9c855d728e3
+  orphan hash: 928ad76f3c4676ffd30314ba1e2bae06
+  flag hash: e3d189ab216185ca46e8ec3971f0c29f
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Calc.Wrapper.parse
+  Calc.Wrapper.ErrClass{Calc.Wrapper.Lexical Calc.Wrapper.Message Calc.Wrapper.Syntactical}
+  Calc.Wrapper.Error{Calc.Wrapper.Error Calc.Wrapper.errClass Calc.Wrapper.errLine Calc.Wrapper.errPos}
+module dependencies: Calc.Base Calc.Data Calc.Lexer Calc.Parser
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0 bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:Data.Either e8724afd65fd432cfe9a54014f5f762d
+import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
+import  -/  base-4.8.2.0:Data.List 3f0782c8d4bf50eecefcd5ea1798aac8
+import  -/  base-4.8.2.0:Data.OldList d8fd80b0e14aa085ce6219cd89dad356
+import  -/  base-4.8.2.0:GHC.Base a4939789b2cfd60b36ed163e56a623cd
+import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
+import  -/  base-4.8.2.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  base-4.8.2.0:Text.Read ef0ef92fb7358ae94bab089940adfd2a
+import  -/  bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Lazy 381d43ef4fab40c90f7ad267b585f3f2
+import  -/  bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Lazy.Internal 53fadf747c97476e546e01c57d904b17
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  Calc.Base ddc776f0b86280963c82d42fe0f25327
+  exports: 150cc122bacd06521551bbbd03cb9ef9
+import  -/  Calc.Data 458e01b909d0a414ea04764919946bdb
+  exports: ddca78a100a14ff199d3e263e042f6e3
+  Program d2e6774a8ef84482f52352224efc1af2
+import  -/  Calc.Lexer 7dbed6056303e487ca72fa46faeae277
+  runAlex f2397297a02b7292b1a8c09bd40a5fe6
+import  -/  Calc.Parser 76a4c0101caeb52cd3cb33b7f392239b
+  exports: 90762b2095da70d1d41d8182d0b91ad5
+  happyParser c0cbbf859eb3dff0e1baeceaf24ea9dc
+b4f40223936c2ae38485f3d053f1efe0
+  $fEqErrClass :: GHC.Classes.Eq Calc.Wrapper.ErrClass
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Wrapper.ErrClass
+                  Calc.Wrapper.$fEqErrClass_$c==
+                  Calc.Wrapper.$fEqErrClass_$c/= -}
+b4f40223936c2ae38485f3d053f1efe0
+  $fEqErrClass_$c/= ::
+    Calc.Wrapper.ErrClass -> Calc.Wrapper.ErrClass -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a2 :: Calc.Wrapper.ErrClass b :: Calc.Wrapper.ErrClass ->
+                 case Calc.Wrapper.$fEqErrClass_$c== a2 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+b4f40223936c2ae38485f3d053f1efe0
+  $fEqErrClass_$c== ::
+    Calc.Wrapper.ErrClass -> Calc.Wrapper.ErrClass -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ ds :: Calc.Wrapper.ErrClass
+                   ds1 :: Calc.Wrapper.ErrClass ->
+                 case ds of wild {
+                   Calc.Wrapper.Syntactical a2
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Calc.Wrapper.Syntactical b1
+                        -> case a2 of wild2 {
+                             GHC.Base.Nothing
+                             -> case b1 of wild3 {
+                                  GHC.Base.Nothing -> GHC.Types.True
+                                  GHC.Base.Just ipv -> GHC.Types.False }
+                             GHC.Base.Just a3
+                             -> case b1 of wild3 {
+                                  GHC.Base.Nothing -> GHC.Types.False
+                                  GHC.Base.Just b2 -> GHC.Base.eqString a3 b2 } } }
+                   Calc.Wrapper.Lexical
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Calc.Wrapper.Lexical -> GHC.Types.True }
+                   Calc.Wrapper.Message a2
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Calc.Wrapper.Message b1 -> GHC.Base.eqString a2 b1 } }) -}
+a7a1df3089d3251a122ec9a0b87a6326
+  $fEqError :: GHC.Classes.Eq Calc.Wrapper.Error
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Wrapper.Error
+                  Calc.Wrapper.$fEqError_$c==
+                  Calc.Wrapper.$fEqError_$c/= -}
+a7a1df3089d3251a122ec9a0b87a6326
+  $fEqError_$c/= ::
+    Calc.Wrapper.Error -> Calc.Wrapper.Error -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLL),1*U(1*U(U),1*U(U),1*U)><S(SLL),1*U(1*U(U),1*U(U),1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ a2 :: Calc.Wrapper.Error b :: Calc.Wrapper.Error ->
+                 case Calc.Wrapper.$fEqError_$c== a2 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+a7a1df3089d3251a122ec9a0b87a6326
+  $fEqError_$c== ::
+    Calc.Wrapper.Error -> Calc.Wrapper.Error -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLL),1*U(1*U(U),1*U(U),1*U)><S(SLL),1*U(1*U(U),1*U(U),1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: Calc.Wrapper.Error w1 :: Calc.Wrapper.Error ->
+                 case w of ww { Calc.Wrapper.Error ww1 ww2 ww3 ->
+                 case ww1 of ww4 { GHC.Types.I# ww5 ->
+                 case w1 of ww6 { Calc.Wrapper.Error ww7 ww8 ww9 ->
+                 case ww7 of ww10 { GHC.Types.I# ww11 ->
+                 Calc.Wrapper.$w$c== ww5 ww2 ww3 ww11 ww8 ww9 } } } }) -}
+b4f40223936c2ae38485f3d053f1efe0
+  $fShowErrClass :: GHC.Show.Show Calc.Wrapper.ErrClass
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Wrapper.ErrClass
+                  Calc.Wrapper.$fShowErrClass_$cshowsPrec
+                  Calc.Wrapper.$fShowErrClass_$cshow
+                  Calc.Wrapper.$fShowErrClass_$cshowList -}
+b4f40223936c2ae38485f3d053f1efe0
+  $fShowErrClass1 :: Calc.Wrapper.ErrClass -> GHC.Show.ShowS
+  {- Arity: 1,
+     Unfolding: (Calc.Wrapper.$fShowErrClass_$cshowsPrec
+                   Calc.Wrapper.$fShowErrClass2) -}
+1ff92ef9702534723c53eca2c82d42e8
+  $fShowErrClass10 :: [GHC.Types.Char]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows8
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+5dcc936d5e475fe2f9b371f8c9b30735
+  $fShowErrClass2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0) -}
+9028eea167090b410dc8109d69f73332
+  $fShowErrClass3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Message "#) -}
+f16c1e8892a9e9c3e27d61e2d3198adb
+  $fShowErrClass4 :: GHC.Show.ShowS
+  {- Arity: 1,
+     Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Calc.Wrapper.$fShowErrClass5) -}
+fe497147fca3e4ae717238c679ef6335
+  $fShowErrClass5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Lexical"#) -}
+e5c2d2b03541c6de468e3d78661bb027
+  $fShowErrClass6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Syntactical "#) -}
+d1d2b6be23b7fc444b6e61b363bd164e
+  $fShowErrClass7 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11) -}
+cacfab3c9827469e2012e401cfb961c1
+  $fShowErrClass8 :: [GHC.Types.Char]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows6
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+b50d96a97010e764e69c471c170da94d
+  $fShowErrClass9 :: [GHC.Types.Char]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows6
+                   Calc.Wrapper.$fShowErrClass10) -}
+b4f40223936c2ae38485f3d053f1efe0
+  $fShowErrClass_$cshow :: Calc.Wrapper.ErrClass -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ x :: Calc.Wrapper.ErrClass ->
+                 case x of wild {
+                   Calc.Wrapper.Syntactical b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Calc.Wrapper.$fShowErrClass6
+                        (case b1 of wild1 {
+                           GHC.Base.Nothing -> GHC.Show.$fShowMaybe3
+                           GHC.Base.Just b2
+                           -> GHC.Types.:
+                                @ GHC.Types.Char
+                                GHC.Show.shows9
+                                (GHC.Base.++
+                                   @ GHC.Types.Char
+                                   GHC.Show.$fShowMaybe1
+                                   (GHC.Types.:
+                                      @ GHC.Types.Char
+                                      GHC.Show.shows6
+                                      (GHC.Show.showLitString b2 Calc.Wrapper.$fShowErrClass9))) })
+                   Calc.Wrapper.Lexical -> Calc.Wrapper.$fShowErrClass5
+                   Calc.Wrapper.Message b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Calc.Wrapper.$fShowErrClass3
+                        (GHC.Types.:
+                           @ GHC.Types.Char
+                           GHC.Show.shows6
+                           (GHC.Show.showLitString b1 Calc.Wrapper.$fShowErrClass8)) }) -}
+b4f40223936c2ae38485f3d053f1efe0
+  $fShowErrClass_$cshowList ::
+    [Calc.Wrapper.ErrClass] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Calc.Wrapper.ErrClass
+                   Calc.Wrapper.$fShowErrClass1) -}
+b4f40223936c2ae38485f3d053f1efe0
+  $fShowErrClass_$cshowsPrec ::
+    GHC.Types.Int -> Calc.Wrapper.ErrClass -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <L,1*U(U)><S,1*U>,
+     Unfolding: (\ a2 :: GHC.Types.Int ds :: Calc.Wrapper.ErrClass ->
+                 case ds of wild {
+                   Calc.Wrapper.Syntactical b1
+                   -> case a2 of wild1 { GHC.Types.I# x ->
+                      let {
+                        g :: GHC.Base.String -> GHC.Base.String
+                        = GHC.Show.$fShowMaybe_$cshowsPrec
+                            @ [GHC.Types.Char]
+                            GHC.Show.$fShow[]_$s$fShow[]1
+                            Calc.Wrapper.$fShowErrClass7
+                            b1
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11) of wild2 {
+                        GHC.Types.False
+                        -> \ x1 :: GHC.Base.String ->
+                           GHC.Base.++ @ GHC.Types.Char Calc.Wrapper.$fShowErrClass6 (g x1)
+                        GHC.Types.True
+                        -> \ x1 :: GHC.Base.String ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows9
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Calc.Wrapper.$fShowErrClass6
+                                (g (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 x1))) } }
+                   Calc.Wrapper.Lexical -> Calc.Wrapper.$fShowErrClass4
+                   Calc.Wrapper.Message b1
+                   -> case a2 of wild1 { GHC.Types.I# x ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11) of wild2 {
+                        GHC.Types.False
+                        -> \ x1 :: GHC.Base.String ->
+                           GHC.Base.++
+                             @ GHC.Types.Char
+                             Calc.Wrapper.$fShowErrClass3
+                             (GHC.Types.:
+                                @ GHC.Types.Char
+                                GHC.Show.shows6
+                                (GHC.Show.showLitString
+                                   b1
+                                   (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 x1)))
+                        GHC.Types.True
+                        -> \ x1 :: GHC.Base.String ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows9
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Calc.Wrapper.$fShowErrClass3
+                                (GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.shows6
+                                   (GHC.Show.showLitString
+                                      b1
+                                      (GHC.Types.:
+                                         @ GHC.Types.Char
+                                         GHC.Show.shows6
+                                         (GHC.Types.:
+                                            @ GHC.Types.Char
+                                            GHC.Show.shows8
+                                            x1))))) } } }) -}
+a7a1df3089d3251a122ec9a0b87a6326
+  $fShowError :: GHC.Show.Show Calc.Wrapper.Error
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Calc.Wrapper.Error
+                  Calc.Wrapper.$fShowError_$cshowsPrec
+                  Calc.Wrapper.$fShowError_$cshow
+                  Calc.Wrapper.$fShowError_$cshowList -}
+a7a1df3089d3251a122ec9a0b87a6326
+  $fShowError1 :: Calc.Wrapper.Error -> GHC.Show.ShowS
+  {- Arity: 1,
+     Unfolding: (\ w :: Calc.Wrapper.Error ->
+                 case w of ww { Calc.Wrapper.Error ww1 ww2 ww3 ->
+                 Calc.Wrapper.$w$cshowsPrec 0 ww1 ww2 ww3 }) -}
+ac3050840f3268bb4dd44d0a5d553c71
+  $fShowError2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
+9c82c9b79dea6eae30ace4347cdc6194
+  $fShowError3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "errClass = "#) -}
+6f1a1104fd1c0788d15f92a11a8787a7
+  $fShowError4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "errPos = "#) -}
+135002b7fc650a40dc5ed68cd3ffe754
+  $fShowError5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
+277c1bed53ad511ab926299fb6500523
+  $fShowError6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "errLine = "#) -}
+14eea3e236bf02473c3d5f1ea914d2cb
+  $fShowError7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Error {"#) -}
+a7a1df3089d3251a122ec9a0b87a6326
+  $fShowError_$cshow :: Calc.Wrapper.Error -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(U(U),U(U),1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Calc.Wrapper.Error ->
+                 Calc.Wrapper.$fShowError_$cshowsPrec
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+a7a1df3089d3251a122ec9a0b87a6326
+  $fShowError_$cshowList :: [Calc.Wrapper.Error] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Calc.Wrapper.Error
+                   Calc.Wrapper.$fShowError1) -}
+a7a1df3089d3251a122ec9a0b87a6326
+  $fShowError_$cshowsPrec ::
+    GHC.Types.Int -> Calc.Wrapper.Error -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U(U)><S,1*U(U(U),U(U),1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: GHC.Types.Int w1 :: Calc.Wrapper.Error ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Calc.Wrapper.Error ww3 ww4 ww5 ->
+                 Calc.Wrapper.$w$cshowsPrec ww1 ww3 ww4 ww5 } }) -}
+3d01cf359bcd0872bfb297df0cb909a4
+  $s$fRead(,,)1 ::
+    Text.ParserCombinators.ReadP.ReadS
+      [GHC.Base.Maybe [GHC.Types.Char]]
+  {- Arity: 1,
+     Unfolding: (Text.ParserCombinators.ReadP.run
+                   @ [GHC.Base.Maybe [GHC.Types.Char]]
+                   Calc.Wrapper.$s$fRead(,,)2) -}
+0686213fc14f039525cb22b1470e8221
+  $s$fRead(,,)2 ::
+    Text.ParserCombinators.ReadP.P [GHC.Base.Maybe [GHC.Types.Char]]
+  {- Unfolding: (GHC.Read.$wa
+                   @ (GHC.Base.Maybe [GHC.Types.Char])
+                   Calc.Wrapper.$s$fRead(,,)3
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                             <GHC.Base.Maybe [GHC.Types.Char]>_R))
+                   @ [GHC.Base.Maybe [GHC.Types.Char]]
+                   (Text.ParserCombinators.ReadP.$fApplicativeP_$creturn
+                      @ [GHC.Base.Maybe [GHC.Types.Char]])) -}
+e163b6459844a8371763402f76a540d9
+  $s$fRead(,,)3 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP
+         (GHC.Base.Maybe [GHC.Types.Char])
+  {- Arity: 1,
+     Unfolding: (GHC.Read.$fReadMaybe2
+                   @ [GHC.Types.Char]
+                   GHC.Read.$fRead[]_$s$fRead[]1) -}
+e329cc4a6ba9983b59ba61042409a435
+  $s$fRead(,,)4 ::
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS
+         (GHC.Base.Maybe [GHC.Types.Char])
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ eta :: GHC.Types.Int ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (GHC.Base.Maybe [GHC.Types.Char])
+                   ((GHC.Read.$fReadMaybe2
+                       @ [GHC.Types.Char]
+                       GHC.Read.$fRead[]_$s$fRead[]1
+                       eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.NTCo:ReadP[0]
+                         <GHC.Base.Maybe [GHC.Types.Char]>_R)
+                      @ (GHC.Base.Maybe [GHC.Types.Char])
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$creturn
+                         @ (GHC.Base.Maybe [GHC.Types.Char])))) -}
+2f75ab6b4018c8b8833d768e32204100
+  $s$fRead(,,)_$s$fReadMaybe ::
+    GHC.Read.Read (GHC.Base.Maybe [GHC.Types.Char])
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Base.Maybe [GHC.Types.Char])
+                  Calc.Wrapper.$s$fRead(,,)4
+                  Calc.Wrapper.$s$fRead(,,)1
+                  (GHC.Read.$fReadMaybe_$creadPrec
+                     @ [GHC.Types.Char]
+                     GHC.Read.$fRead[]_$s$fRead[]1)
+                  (GHC.Read.$fReadMaybe_$creadListPrec
+                     @ [GHC.Types.Char]
+                     GHC.Read.$fRead[]_$s$fRead[]1) -}
+fc9bdde0abe910ffd3243034544cbfbf
+  $w$c== ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Calc.Wrapper.ErrClass
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Calc.Wrapper.ErrClass
+    -> GHC.Types.Bool
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <L,U><L,1*U(U)><L,1*U><L,U><L,1*U(U)><L,1*U>,
+     Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int#
+                   ww1 :: GHC.Types.Int
+                   ww2 :: Calc.Wrapper.ErrClass
+                   ww3 :: GHC.Prim.Int#
+                   ww4 :: GHC.Types.Int
+                   ww5 :: Calc.Wrapper.ErrClass ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww ww3) of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case ww1 of wild1 { GHC.Types.I# x ->
+                      case ww4 of wild2 { GHC.Types.I# y ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.==# x y) of wild3 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> Calc.Wrapper.$fEqErrClass_$c== ww2 ww5 } } } }) -}
+3c80ec397bbd6403b54d308ff319ffbf
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Calc.Wrapper.ErrClass
+    -> GHC.Show.ShowS
+  {- Arity: 4, Strictness: <L,U><L,U(U)><L,U(U)><L,1*U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int#
+                   ww1 :: GHC.Types.Int
+                   ww2 :: GHC.Types.Int
+                   ww3 :: Calc.Wrapper.ErrClass ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = Calc.Wrapper.$fShowErrClass_$cshowsPrec
+                       Calc.Wrapper.$fShowErrClass2
+                       ww3
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ x :: GHC.Base.String ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       Calc.Wrapper.$fShowError7
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          Calc.Wrapper.$fShowError6
+                          (case ww1 of ww4 { GHC.Types.I# ww5 ->
+                           case GHC.Show.$wshowSignedInt
+                                  0
+                                  ww5
+                                  (GHC.Base.++
+                                     @ GHC.Types.Char
+                                     Calc.Wrapper.$fShowError5
+                                     (GHC.Base.++
+                                        @ GHC.Types.Char
+                                        Calc.Wrapper.$fShowError4
+                                        (case ww2 of ww6 { GHC.Types.I# ww7 ->
+                                         case GHC.Show.$wshowSignedInt
+                                                0
+                                                ww7
+                                                (GHC.Base.++
+                                                   @ GHC.Types.Char
+                                                   Calc.Wrapper.$fShowError5
+                                                   (GHC.Base.++
+                                                      @ GHC.Types.Char
+                                                      Calc.Wrapper.$fShowError3
+                                                      (f (GHC.Base.++
+                                                            @ GHC.Types.Char
+                                                            Calc.Wrapper.$fShowError2
+                                                            x)))) of ww8 { (#,#) ww9 ww10 ->
+                                         GHC.Types.:
+                                           @ GHC.Types.Char
+                                           ww9
+                                           ww10 } }))) of ww6 { (#,#) ww7 ww8 ->
+                           GHC.Types.: @ GHC.Types.Char ww7 ww8 } }))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11) of wild {
+                   GHC.Types.False -> p
+                   GHC.Types.True
+                   -> \ x :: GHC.Base.String ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 x)) }) -}
+b4f40223936c2ae38485f3d053f1efe0
+  data ErrClass
+    = Syntactical (GHC.Base.Maybe GHC.Base.String)
+    | Lexical
+    | Message GHC.Base.String
+a7a1df3089d3251a122ec9a0b87a6326
+  data Error
+    = Error {errLine :: GHC.Types.Int,
+             errPos :: GHC.Types.Int,
+             errClass :: Calc.Wrapper.ErrClass}
+9e2a486ea1247405e11855ce24a822be
+  errClass :: Calc.Wrapper.Error -> Calc.Wrapper.ErrClass
+  RecSel Calc.Wrapper.Error
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Calc.Wrapper.Error ->
+                 case ds of wild { Calc.Wrapper.Error ds1 ds2 ds3 -> ds3 }) -}
+4c035e46433c4741dd213ae3ebbc8656
+  errLine :: Calc.Wrapper.Error -> GHC.Types.Int
+  RecSel Calc.Wrapper.Error
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U(U),A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Calc.Wrapper.Error ->
+                 case ds of wild { Calc.Wrapper.Error ds1 ds2 ds3 -> ds1 }) -}
+7a04131df6a9155d52ba2d93c3c93c3e
+  errPos :: Calc.Wrapper.Error -> GHC.Types.Int
+  RecSel Calc.Wrapper.Error
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U(U),A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Calc.Wrapper.Error ->
+                 case ds of wild { Calc.Wrapper.Error ds1 ds2 ds3 -> ds2 }) -}
+97b036f345ed6cdc8a41d7ddb0ab8068
+  parse ::
+    Data.ByteString.Lazy.Internal.ByteString
+    -> Data.Either.Either Calc.Wrapper.Error Calc.Data.Program
+  {- Arity: 1, Strictness: <L,U> -}
+instance GHC.Classes.Eq [Calc.Wrapper.ErrClass]
+  = Calc.Wrapper.$fEqErrClass
+instance GHC.Classes.Eq [Calc.Wrapper.Error]
+  = Calc.Wrapper.$fEqError
+instance GHC.Show.Show [Calc.Wrapper.ErrClass]
+  = Calc.Wrapper.$fShowErrClass
+instance GHC.Show.Show [Calc.Wrapper.Error]
+  = Calc.Wrapper.$fShowError
+"SPEC/Calc.Wrapper $fReadMaybe @ [Char]" [ALWAYS] forall $dRead :: GHC.Read.Read
+                                                                     [GHC.Types.Char]
+  GHC.Read.$fReadMaybe @ [GHC.Types.Char] $dRead
+  = Calc.Wrapper.$s$fRead(,,)_$s$fReadMaybe
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

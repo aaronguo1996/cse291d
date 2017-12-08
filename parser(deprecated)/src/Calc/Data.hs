@@ -18,6 +18,7 @@ data Exp    = Let Var Exp Exp
     | ITE Exp Exp Exp
     | Case Var CaseNil CaseCons
     | Lambda Var Exp
+    | App Exp Exp
     | Brack Exp
     | ExpTrue
     | ExpFalse
