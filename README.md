@@ -17,6 +17,7 @@ Project for CSE 291D
   * run rewriter.hs
   * all output programs are generated in "outputs/"
   * all outputs are written in a single line, use a haskell formatter (like $hfmt -w) to make them look better
+  * hfmt seems to have some indention issues
 * TODO:
   * incorporate a front-end parser
   * implement typing system
