@@ -65,3 +65,7 @@ randomStream l = Stream next l
     next (x:xs)
         | x < 50 = Skip ((x+50):xs)
         | otherwise = Yield x xs
+
+substr2 :: String -> Int -> Int -> String
+substr2 ""  _ _ = ""
+substr2 str i j = drop i $ take j str

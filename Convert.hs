@@ -1,6 +1,9 @@
+{-# LANGUAGE ExistentialQuantification #-}
+
 import Control.Monad
 import Data.List
 import Data.Strings
+import Data.Dynamic
 import Language.Haskell.Interpreter
 import Language.Haskell.Interpreter.Extension
 import System.Environment
@@ -10,6 +13,8 @@ import System.Exit
 import Enumeration
 import StreamFusion
 import Helper
+import Types
+import Parser
 
 -- | A helper function to split the read file into separate lines
 -- The only argument for this function is of type 'String' which denotes 
@@ -88,6 +93,28 @@ testFilter codeFile = do
                         readProcessWithExitCode "rm" [codeFile] ""
                         return False
 
+-- | The function 'testMap' is for filters testing
+-- The first argument is of type 'String' which is the code to be executed
+-- In this function, we call the 'runhaskell' in the shell command and get the
+-- output to compare whether they have the same behavior as the built-in filter
+testMap :: String -> IO Bool
+testMap codeFile = do
+    let p = ((\x -> x > 75) :: Int -> Bool)
+    testCase <- (randomList 10 (1,100)) -- Some magic numbers here
+    (exitCode,testRes,errMsg) <- readProcessWithExitCode "runhaskell" ["-XExistentialQuantification",codeFile,(listToStr testCase)] ""
+    case exitCode of
+        ExitSuccess -> do
+                        putStrLn $ show (map (\x->if x<50 then x+50 else x) testCase)
+                        let expcRes = show (map p (map (\x->if x<50 then x+50 else x) testCase))
+                        let cleanRes = deleteAt ((Data.List.length testRes) - 1) testRes
+                        putStrLn $ expcRes
+                        putStrLn $ cleanRes
+                        return (cleanRes == expcRes)
+        ExitFailure i -> do 
+                        putStrLn $ errMsg
+                        readProcessWithExitCode "rm" [codeFile] ""
+                        return False
+
 -- | The function 'iteration' iteratively search in the components to find a
 -- program with proper behavior we expected
 -- The first argument is of type '[[Int]]' which is all the possible assignment
@@ -102,14 +129,15 @@ iteration fraglist idx filelines = do
         then return ["Failed"]
         else do
             let code = convertQM (nth idx fraglist) 0 filelines
-            let codeFile = "Filters" ++ show idx ++ ".hs"
-            let decCode = ["module Filters" ++ show idx ++"(filters) where",""] ++ code
-            writeFile codeFile $ unlines decCode
-            success <- testFilter codeFile
+            let codeFile = "Maps" ++ show idx ++ ".hs"
+            -- let decCode = ["module Maps" ++ show idx ++"(maps) where",""] ++ code
+            writeFile codeFile $ unlines code
+            --success <- testFilter codeFile
+            success <- testMap codeFile
             if success
                 then do 
-                    putStrLn $ unlines decCode
-                    return decCode
+                    putStrLn $ unlines code
+                    return code
                 else do
                     putStrLn "Wrong program, new iteration..."
                     readProcessWithExitCode "rm" [codeFile] ""
@@ -120,5 +148,8 @@ main = do
     [f] <- getArgs
     file <- readFile f
     let filelines = getLines file
-    reslines <- iteration (getHoleIdx (getHoles filelines) 3) 0 filelines
-    putStrLn $ unlines reslines
+    putStrLn $ getFunName (getSignature filelines)
+    putStrLn $ typeToStr (typeParser (lexer (getFunType (getSignature filelines))))
+    -- reslines <- iteration (getHoleIdx (getHoles filelines) 3) 0 filelines
+    -- putStrLn $ unlines reslines
+    --putStrLn $ typeToStr (typeParser (lexer "[Int->Int]"))

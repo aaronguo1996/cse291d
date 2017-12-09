@@ -1,3 +1,5 @@
+{-# LANGUAGE ExistentialQuantification #-}
+
 module StreamFusion where
 
 data Step a s = Done
