@@ -1,0 +1,18 @@
+import System.Environment
+import StreamFusion
+import Helper
+
+doubles 	(Stream next_1 s_1)=(Stream next s_1)
+  where
+	next 	s_1=case (next_1 s_1) of
+		Done -> Done
+		Skip (s_1) -> Skip (s_1)
+		Yield x (s_1) -> Yield (x*2) (s_1)
+
+
+main = do
+    [f] <- getArgs
+    let l = (strToList f)
+    let s = (randomStream l)
+    --putStrLn $ show s
+    putStrLn $ show (unstream (doubles s))

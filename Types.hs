@@ -107,7 +107,7 @@ happyReduction_1 (HappyAbsSyn4  happy_var_3)
 	_
 	(HappyAbsSyn5  happy_var_1)
 	 =  HappyAbsSyn4
-		 (Fun happy_var_1 happy_var_3
+		 (TFun happy_var_1 happy_var_3
 	)
 happyReduction_1 _ _ _  = notHappyAtAll 
 
@@ -121,7 +121,7 @@ happyReduction_2 _  = notHappyAtAll
 happyReduce_3 = happySpecReduce_1  5 happyReduction_3
 happyReduction_3 (HappyTerminal (TokenVar happy_var_1))
 	 =  HappyAbsSyn5
-		 (Var happy_var_1
+		 (TVar happy_var_1
 	)
 happyReduction_3 _  = notHappyAtAll 
 
@@ -130,7 +130,7 @@ happyReduction_4 _
 	(HappyAbsSyn4  happy_var_2)
 	_
 	 =  HappyAbsSyn5
-		 (Paren happy_var_2
+		 (TParen happy_var_2
 	)
 happyReduction_4 _ _ _  = notHappyAtAll 
 
@@ -139,7 +139,7 @@ happyReduction_5 _
 	(HappyAbsSyn4  happy_var_2)
 	_
 	 =  HappyAbsSyn5
-		 (List happy_var_2
+		 (TList happy_var_2
 	)
 happyReduction_5 _ _ _  = notHappyAtAll 
 
@@ -151,7 +151,7 @@ happyReduction_6 (_ `HappyStk`
 	_ `HappyStk`
 	happyRest)
 	 = HappyAbsSyn5
-		 (Tuple happy_var_2 happy_var_4
+		 (TTuple happy_var_2 happy_var_4
 	) `HappyStk` happyRest
 
 happyNewToken action sts stk [] =
@@ -205,14 +205,15 @@ happySeq = happyDontSeq
 parseError :: [Token] -> a
 parseError _ = error "Parse error"
 
-data TypeExpr = Term Exp1
-              | Fun Exp1 TypeExpr
+data TypeExpr = Term TExp
+              | TFun TExp TypeExpr
               deriving Show
 
-data Exp1 = Var String
-          | Paren TypeExpr
-          | List TypeExpr
-          | Tuple TypeExpr TypeExpr
+data TExp = TVar String
+          | TParen TypeExpr
+          | TList TypeExpr
+          | TTuple TypeExpr TypeExpr
+          | TStream TypeExpr
           deriving Show
 
 data Token
@@ -244,15 +245,16 @@ lexVar cs =
 typeToStr :: TypeExpr -> String
 typeToStr exp = case exp of
     Term t -> exp1ToStr t
-    Fun t1 t2 -> (exp1ToStr t1) ++ "->" ++ (typeToStr t2)
+    TFun t1 t2 -> (exp1ToStr t1) ++ "->" ++ (typeToStr t2)
     
 
-exp1ToStr :: Exp1 -> String
+exp1ToStr :: TExp -> String
 exp1ToStr exp = case exp of
-    Var v -> v
-    Paren e -> "(" ++ (typeToStr e) ++ ")"
-    List t -> "[" ++ (typeToStr t) ++ "]"
-    Tuple t1 t2 -> "(" ++ (typeToStr t1) ++ "," ++ (typeToStr t2) ++ ")"
+    TVar v -> v
+    TParen e -> "(" ++ (typeToStr e) ++ ")"
+    TList t -> "[" ++ (typeToStr t) ++ "]"
+    TTuple t1 t2 -> "(" ++ (typeToStr t1) ++ "," ++ (typeToStr t2) ++ ")"
+    TStream t1 -> "Stream " ++ (typeToStr t1)
 
 -- main = getContents >>= print . typeParser . lexer
 -- parseFile :: String -> IO Stmt

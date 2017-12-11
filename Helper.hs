@@ -24,10 +24,16 @@ deleteAt 0 (x:xs) = xs
 deleteAt n (x:xs) | n >= 0 = x : (deleteAt (n-1) xs)
 deleteAt _ _ = error "index out of range"
 
+popBack :: [a] -> [a]
+popBack [] = []
+popBack [x] = []
+popBack (x:xs) = x:(popBack xs)
+
 -- | Helper function which returns the nth element in a list
 -- The first argument is of type 'Int' which is the position n
 -- The second argument is of type '[a]' which is the list we select from
 nth :: Int -> [a] -> a
+nth _ [] = error "list is empty"
 nth 0 (x : _ ) = x
 nth n (_ : xs) = nth (n - 1) xs
 
@@ -63,9 +69,19 @@ randomStream l = Stream next l
   where
     next [] = Done
     next (x:xs)
-        | x < 50 = Skip ((x+50):xs)
+        | x < 50 = Skip ((x+100):xs)
         | otherwise = Yield x xs
 
 substr2 :: String -> Int -> Int -> String
 substr2 ""  _ _ = ""
 substr2 str i j = drop i $ take j str
+
+trim :: String -> String
+trim "" = ""
+trim (s:str)
+    | s == ' ' = trim str
+    | otherwise = s:(trim str)
+
+splitList :: [a] -> [[a]]
+splitList [] = []
+splitList (x:xs) = [x]:(splitList xs)

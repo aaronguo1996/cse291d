@@ -1,6 +1,8 @@
 module Parser where
 
 import Data.List
+import Types
+import Helper
 
 getSignature :: [String] -> String
 getSignature [] = ""
@@ -15,7 +17,7 @@ getNameType str =
         Nothing -> ("a","b")
 
 getFunName :: String -> String
-getFunName str = fst $ getNameType str
+getFunName str = (trim $ fst (getNameType str)) ++ "s"
 
-getFunType :: String -> String
-getFunType str = snd $ getNameType str
+getFunType :: String -> TypeExpr
+getFunType str = typeParser (lexer (snd (getNameType str)))

@@ -1,5 +1,5 @@
 {
-module Types where
+module ExprParser where
 
 import Data.Char
 
