@@ -291,7 +291,6 @@ assignHoles comps expr = case expr of
 validSwitchEnv :: [String] -> [(Expr,Expr)] -> Bool
 validSwitchEnv env [] = True
 validSwitchEnv env ((e1,e2):xs) = 
-    (validInEnv env e1) &&
     (validInEnv (addParamToEnv [e1] env) e2) &&
     (validSwitchEnv env xs)
 
@@ -333,6 +332,6 @@ getFreeNames (x:xs) = case x of
     _ -> getFreeNames xs
 
 validateExpr :: Expr -> [(Expr,TypeExpr)] -> Bool
-validateExpr expr fv = validInEnv (["x","y"] ++ freeNames) expr
+validateExpr expr fv = validInEnv (freeNames) expr
   where
     freeNames = getFreeNames fv

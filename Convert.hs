@@ -1,9 +1,13 @@
 {-# LANGUAGE ExistentialQuantification #-}
+{-# LANGUAGE OverloadedStrings #-}
 
 import Control.Monad
 import Data.List
 import Data.Strings
 import Data.Dynamic
+import Formatting
+import Formatting.Clock
+import System.Clock
 --import Language.Haskell.Interpreter
 --import Language.Haskell.Interpreter.Extension
 import System.Environment
@@ -120,7 +124,7 @@ testFilter codeFile = do
                         readProcessWithExitCode "rm" [codeFile] ""
                         return False
 
--- | The function 'testMap' is for filters testing
+-- | The function 'testMap' is for maps testing
 -- The first argument is of type 'String' which is the code to be executed
 -- In this function, we call the 'runhaskell' in the shell command and get the
 -- output to compare whether they have the same behavior as the built-in filter
@@ -131,11 +135,11 @@ testMap codeFile = do
     (exitCode,testRes,errMsg) <- readProcessWithExitCode "runhaskell" ["-XExistentialQuantification",codeFile,(listToStr testCase)] ""
     case exitCode of
         ExitSuccess -> do
-                        putStrLn $ show (map (\x->if x<50 then x+100 else x) testCase)
+                        --putStrLn $ show (map (\x->if x<50 then x+100 else x) testCase)
                         let expcRes = show (map p (map (\x->if x<50 then x+100 else x) testCase))
                         let cleanRes = deleteAt ((Data.List.length testRes) - 1) testRes
-                        putStrLn $ expcRes
-                        putStrLn $ cleanRes
+                        --putStrLn $ expcRes
+                        --putStrLn $ cleanRes
                         return (cleanRes == expcRes)
         ExitFailure i -> do 
                         --putStrLn $ errMsg
@@ -158,7 +162,7 @@ testAppend codeFile = do
                         return (cleanRes == expcRes)
         ExitFailure i -> do 
                         --putStrLn $ errMsg
-                        -- readProcessWithExitCode "rm" [codeFile] ""
+                        readProcessWithExitCode "rm" [codeFile] ""
                         return False
 
 testDouble  :: String -> IO Bool
@@ -169,16 +173,35 @@ testDouble codeFile = do
     case exitCode of
         ExitSuccess -> do
                         let l = (map (\x->if x<50 then x+100 else x) testCase)
-                        putStrLn $ show (l)
+                        --putStrLn $ show (l)
                         let expcRes = show (map (\x->x*2) l)
                         let cleanRes = deleteAt ((Data.List.length testRes) - 1) testRes
-                        putStrLn $ expcRes
-                        putStrLn $ cleanRes
+                        --putStrLn $ expcRes
+                        --putStrLn $ cleanRes
                         return (cleanRes == expcRes)
         ExitFailure i -> do 
                         --putStrLn $ errMsg
                         readProcessWithExitCode "rm" [codeFile] ""
                         return False
+
+testId :: String -> IO Bool
+testId codeFile = do
+    let p = ((\x -> x > 75) :: Int -> Bool)
+    testCase <- (randomList 10 (1,100)) -- Some magic numbers here
+    (exitCode,testRes,errMsg) <- readProcessWithExitCode "runhaskell" ["-XExistentialQuantification",codeFile,(listToStr testCase)] ""
+    case exitCode of
+        ExitSuccess -> do
+                        --putStrLn $ show (map (\x->if x<50 then x+100 else x) testCase)
+                        let expcRes = show ((map (\x->if x<50 then x+100 else x) testCase))
+                        let cleanRes = deleteAt ((Data.List.length testRes) - 1) testRes
+                        --putStrLn $ expcRes
+                        --putStrLn $ cleanRes
+                        return (cleanRes == expcRes)
+        ExitFailure i -> do 
+                        --putStrLn $ errMsg
+                        readProcessWithExitCode "rm" [codeFile] ""
+                        return False
+
 
 -- | The function 'iteration' iteratively search in the components to find a
 -- program with proper behavior we expected
@@ -197,28 +220,28 @@ iteration fraglist idx signature sketchHead comps fun freeVar = do
             file <- readFile "template.hs"
             let program = fillHoles (nth idx fraglist) 0 comps fun
             --putStrLn $ exprToStr program
-            if not (validateExpr program freeVar)
-                then do
-                    putStrLn "check error"
-                    iteration fraglist (idx+1) signature sketchHead comps fun freeVar
+            -- if not (validateExpr program freeVar)
+            --     then do
+            --         --putStrLn "check error"
+            --         iteration fraglist (idx+1) signature sketchHead comps fun freeVar
+            --     else do
+                    --putStrLn "check success"
+            let sketch = exprToStr program
+            let code = replaceTemplate file (sketchHead++sketch) funName 1
+            --readProcessWithExitCode "rm" [codeFile] ""
+            --fillHoles (nth idx fraglist) 0 newsketch comps
+            let codeFile = funName ++ show idx ++ ".hs"
+            writeFile codeFile code
+            
+            success <- testId codeFile
+            if success
+                then do 
+                    putStrLn code
+                    return code
                 else do
-                    putStrLn "check success"
-                    let sketch = exprToStr program
-                    let code = replaceTemplate file (sketchHead++sketch) funName 1
-                    --readProcessWithExitCode "rm" [codeFile] ""
-                    --fillHoles (nth idx fraglist) 0 newsketch comps
-                    let codeFile = funName ++ show idx ++ ".hs"
-                    writeFile codeFile code
-                    
-                    success <- testMap codeFile
-                    if success
-                        then do 
-                            putStrLn code
-                            return code
-                        else do
-                            putStrLn "Wrong program, new iteration..."
-                            readProcessWithExitCode "rm" [codeFile] ""
-                            iteration fraglist (idx+1) signature sketchHead comps fun freeVar
+                    --putStrLn "Wrong program, new iteration..."
+                    readProcessWithExitCode "rm" [codeFile] ""
+                    iteration fraglist (idx+1) signature sketchHead comps fun freeVar
 
 -- | This is the main function to be executed
 main = do
@@ -231,19 +254,25 @@ main = do
     let funType = typeTransform (getFunType signature)
     let sketchHead = ""--funName ++ "::"++(typeToStr funType)++"\n"
     let sketch = sketchHead++(exprToStr fun)
-    let freeVar = [(Var "(f x)",Term (TVar "FV")),(Var "x",Term (TVar "FV"))]
+    let freeVar = []--(Var "x",Term (TVar "FV")),(Var "y",Term (TVar "FV"))]--(Var "(x*2)",Term (TVar "FV"))]
+    start <- getTime Monotonic
     let comps = (getComponents signature freeVar)
+    end <- getTime Monotonic
+    fprint (timeSpecs % "\n") start end
+    istart <- getTime Monotonic
     let holeIdx =  assignHoles comps fun
     let assignment = generateAssignments holeIdx
     let program = fillHoles (nth 7 assignment) 0 comps fun
     --putStrLn $ show (nth 0 assignment)
-    putStrLn $ exprToStr fun
-    putStrLn $ exprToStr program
+    --putStrLn $ exprToStr fun
+    --putStrLn $ exprToStr program
     --putStrLn $ observe "validInEnv" (show (validInEnv ["True","False"] program))
     --putStrLn $ show (length comps)
-    putStrLn $ unlines (printComponents comps)
-    putStrLn $ show (holeIdx)
+    --putStrLn $ unlines (printComponents comps)
+    --putStrLn $ show (holeIdx)
     -- putStrLn $ exprToStr (generateFun (getSignature filelines))
     reslines <- iteration assignment 0 signature sketchHead comps fun freeVar
+    iend <- getTime Monotonic
+    fprint (timeSpecs % "\n") istart iend
     putStrLn reslines
     --putStrLn $ typeToStr (typeParser (lexer "[Int->Int]"))
